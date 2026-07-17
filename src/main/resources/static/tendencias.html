@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos en Tendencia - KOKY</title>
+
+    <!-- Enlaces a los estilos y fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <span><i class="fa-solid fa-bolt"></i> 3 cuotas sin interés</span>
+            <span><i class="fa-solid fa-truck"></i> Envíos a todo el Perú</span>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">KOKY</a>
+            <form class="search-bar" id="search-form">
+                <input type="search" id="search-input" placeholder="Buscar productos, marcas y más...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div class="user-actions">
+                <div class="user-menu" id="user-menu-logged-out">
+                    <div class="user-menu-trigger"><span>Hola, <br><b>Inicia sesión</b></span><i
+                            class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="user-dropdown">
+                        <li><a href="#" class="open-login-modal">Inicia sesión</a></li>
+                        <li><a href="#" class="open-register-modal">Regístrate</a></li>
+                        <li><a href="perfil.html">Mi cuenta</a></li>
+                    </ul>
+                </div>
+                <div class="user-menu" id="user-menu-logged-in" style="display: none;">
+                    <div class="user-menu-trigger"><span id="welcome-message"></span><i
+                            class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="user-dropdown">
+                        <li><a href="perfil.html">Mi cuenta</a></li>
+                        <li><a href="mis-puntos.html">Mis Puntos</a></li>
+                        <li><a href="mis-compras.html">Mis Compras</a></li>
+                        <li><a href="#" id="logout-btn">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+                <a href="carrito.html" aria-label="Carrito de compras" class="cart-icon"><i
+                        class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">¡NOVEDADES!</a></li>
+                <li><a href="tendencias.html" class="active">PRODUCTOS EN TENDENCIA</a></li>
+                <li><a href="escolar.html">ESCOLAR</a></li>
+                <li><a href="oficina.html">OFICINA</a></li>
+                <li><a href="regaleria.html">REGALERÍA</a></li>
+                <li><a href="marcas.html">MARCAS & TEMÁTICAS</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container" style="padding-top: 60px; padding-bottom: 60px;">
+            <h2 class="section-title">Tendencias: Colección Lilo & Stitch</h2>
+
+            <div class="product-grid">
+                <!-- PRODUCTO 1 -->
+                <div class="product-card" data-id="101" data-name="Mochila de Stitch" data-price="129.90"
+                    data-image="img/mochilaStich.jpg">
+                    <!-- Botón de Favoritos -->
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+
+                    <img src="img/mochilaStich.jpg" alt="Mochila de Stitch">
+                    <h3>Mochila de Stitch</h3>
+                    <div class="price"><span class="current-price">S/ 129.90</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 2 -->
+                <div class="product-card" data-id="102" data-name="Cuaderno Lilo & Stitch" data-price="24.50"
+                    data-image="img/cuadernoLilo&Stich.jpg">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/cuadernoLilo&Stich.jpg" alt="Cuaderno Lilo & Stitch">
+                    <h3>Cuaderno Lilo & Stitch</h3>
+                    <div class="price"><span class="current-price">S/ 24.50</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 3 -->
+                <div class="product-card" data-id="103" data-name="Taza Mágica de Stitch" data-price="39.90"
+                    data-image="img/tazaMagicaStitch.jpg">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/tazaMagicaStitch.jpg" alt="Taza Mágica de Stitch">
+                    <h3>Taza Mágica de Stitch</h3>
+                    <div class="price"><span class="current-price">S/ 39.90</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 4 -->
+                <div class="product-card" data-id="104" data-name="Peluche de Stitch 30cm" data-price="89.90"
+                    data-image="img/PelucheStitch.jpg">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/PelucheStitch.jpg" alt="Peluche de Stitch 30cm">
+                    <h3>Peluche de Stitch 30cm</h3>
+                    <div class="price"><span class="current-price">S/ 89.90</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 5 -->
+                <div class="product-card" data-id="105" data-name="Set de Lapiceros Stitch" data-price="29.90"
+                    data-image="img/SetLapicerosStitch.jpg">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/SetLapicerosStitch.jpg" alt="Set de Lapiceros Stitch">
+                    <h3>Set de Lapiceros Stitch</h3>
+                    <div class="price"><span class="current-price">S/ 29.90</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 6 -->
+                <div class="product-card" data-id="106" data-name="Funko Pop! de Lilo" data-price="65.00"
+                    data-image="img/FunkoPopLilo.jpg">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/FunkoPopLilo.jpg" alt="Funko Pop! de Lilo">
+                    <h3>Funko Pop! de Lilo</h3>
+                    <div class="price"><span class="current-price">S/ 65.00</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 7 -->
+                <div class="product-card" data-id="107" data-name="Gorra Bordada de Stitch" data-price="45.00"
+                    data-image="img/gorraBordadaStitch.webp">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/gorraBordadaStitch.webp" alt="Gorra Bordada de Stitch">
+                    <h3>Gorra Bordada de Stitch</h3>
+                    <div class="price"><span class="current-price">S/ 45.00</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 8 -->
+                <div class="product-card" data-id="108" data-name="Pantuflas de Stitch" data-price="55.90"
+                    data-image="img/pantuflasStitch.jpg">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/pantuflasStitch.jpg" alt="Pantuflas de Stitch">
+                    <h3>Pantuflas de Stitch</h3>
+                    <div class="price"><span class="current-price">S/ 55.90</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 9 -->
+                <div class="product-card" data-id="109" data-name="Cartuchera de Scrump" data-price="32.00"
+                    data-image="img/CartucheraStitch.webp">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/CartucheraStitch.webp" alt="Cartuchera de Scrump">
+                    <h3>Cartuchera de Scrump</h3>
+                    <div class="price"><span class="current-price">S/ 32.00</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 10 -->
+                <div class="product-card" data-id="110" data-name="Llavero Metálico Angel" data-price="19.90"
+                    data-image="img/llaveroAngelStitch.jpg">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/llaveroAngelStitch.jpg" alt="Llavero Metálico Angel">
+                    <h3>Llavero Metálico Angel</h3>
+                    <div class="price"><span class="current-price">S/ 19.90</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 11 -->
+                <div class="product-card" data-id="111" data-name="Pijama de Stitch" data-price="99.90"
+                    data-image="img/pijamaStitch.jpeg">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/pijamaStitch.jpeg" alt="Pijama de Stitch">
+                    <h3>Pijama de Stitch</h3>
+                    <div class="price"><span class="current-price">S/ 99.90</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 12 -->
+                <div class="product-card" data-id="112" data-name="Botella Tomatodo" data-price="38.50"
+                    data-image="img/TomatodoStitch.webp">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/TomatodoStitch.webp" alt="Botella Tomatodo">
+                    <h3>Botella Tomatodo</h3>
+                    <div class="price"><span class="current-price">S/ 38.50</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 13 -->
+                <div class="product-card" data-id="113" data-name="Stickers Holográficos" data-price="15.00"
+                    data-image="img/StickersStitch.jpg">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/StickersStitch.jpg" alt="Stickers Holográficos">
+                    <h3>Stickers Holográficos</h3>
+                    <div class="price"><span class="current-price">S/ 15.00</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 14 -->
+                <div class="product-card" data-id="114" data-name="Póster Enmarcado" data-price="50.00"
+                    data-image="img/PosterStitch.webp">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/PosterStitch.webp" alt="Póster Enmarcado">
+                    <h3>Póster Enmarcado</h3>
+                    <div class="price"><span class="current-price">S/ 50.00</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 15 -->
+                <div class="product-card" data-id="115" data-name="Medias de Stitch" data-price="22.90"
+                    data-image="img/mediasStitch.jpg">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/mediasStitch.jpg" alt="Medias de Stitch">
+                    <h3>Medias de Stitch</h3>
+                    <div class="price"><span class="current-price">S/ 22.90</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 16 -->
+                <div class="product-card" data-id="116" data-name="Agenda 2025 Stitch" data-price="49.90"
+                    data-image="img/AgendaStitch.webp">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/AgendaStitch.webp" alt="Agenda 2025 Stitch">
+                    <h3>Agenda 2025 Stitch</h3>
+                    <div class="price"><span class="current-price">S/ 49.90</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 17 -->
+                <div class="product-card" data-id="117" data-name="Lámpara LED 3D Stitch" data-price="75.00"
+                    data-image="img/LamparaLedStitch.webp">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/LamparaLedStitch.webp" alt="Lámpara LED 3D Stitch">
+                    <h3>Lámpara LED 3D Stitch</h3>
+                    <div class="price"><span class="current-price">S/ 75.00</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 18 -->
+                <div class="product-card" data-id="118" data-name="Mousepad Gamer Stitch" data-price="42.00"
+                    data-image="img/MousePadStitch.jpg">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/MousePadStitch.jpg" alt="Mousepad Gamer Stitch">
+                    <h3>Mousepad Gamer Stitch</h3>
+                    <div class="price"><span class="current-price">S/ 42.00</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 19 -->
+                <div class="product-card" data-id="119" data-name="Pin Esmaltado Stitch" data-price="18.00"
+                    data-image="img/PinStitch.webp">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/PinStitch.webp" alt="Pin Esmaltado Stitch">
+                    <h3>Pin Esmaltado Stitch</h3>
+                    <div class="price"><span class="current-price">S/ 18.00</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 20 -->
+                <div class="product-card" data-id="120" data-name="Lonchera Térmica" data-price="59.90"
+                    data-image="img/LoncheraStitch.jpg">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/LoncheraStitch.jpg" alt="Lonchera Térmica">
+                    <h3>Lonchera Térmica</h3>
+                    <div class="price"><span class="current-price">S/ 59.90</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 21 -->
+                <div class="product-card" data-id="121" data-name="Cargador Portatil" data-price="85.00"
+                    data-image="img/CargadorPortatilStitch.jpeg">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/CargadorPortatilStitch.jpeg" alt="Cargador Portatil">
+                    <h3>Cargador Portatil</h3>
+                    <div class="price"><span class="current-price">S/ 85.00</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 22 -->
+                <div class="product-card" data-id="122" data-name="Libreta de Notas" data-price="28.00"
+                    data-image="img/LibretaStitch.jpg">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/LibretaStitch.jpg" alt="Libreta de Notas">
+                    <h3>Libreta de Notas</h3>
+                    <div class="price"><span class="current-price">S/ 28.00</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 23 -->
+                <div class="product-card" data-id="123" data-name="Vaso con Cañita" data-price="35.00"
+                    data-image="img/vasoStitch.webp">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/vasoStitch.webp" alt="Vaso con Cañita">
+                    <h3>Vaso con Cañita</h3>
+                    <div class="price"><span class="current-price">S/ 35.00</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 24 -->
+                <div class="product-card" data-id="124" data-name="Set de Maquillaje" data-price="79.90"
+                    data-image="img/SetMaquillajeStitch.webp">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/SetMaquillajeStitch.webp" alt="Set de Maquillaje">
+                    <h3>Set de Maquillaje</h3>
+                    <div class="price"><span class="current-price">S/ 79.90</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 25 -->
+                <div class="product-card" data-id="125" data-name="Audífonos Bluetooth" data-price="119.90"
+                    data-image="img/AudifonosStitch.webp">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/AudifonosStitch.webp" alt="Audífonos Bluetooth">
+                    <h3>Audífonos Bluetooth</h3>
+                    <div class="price"><span class="current-price">S/ 119.90</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 26 -->
+                <div class="product-card" data-id="126" data-name="Paraguas Plegable" data-price="48.00"
+                    data-image="img/paraguaStitch.webp">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/paraguaStitch.webp" alt="Paraguas Plegable">
+                    <h3>Paraguas Plegable</h3>
+                    <div class="price"><span class="current-price">S/ 48.00</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 27 -->
+                <div class="product-card" data-id="127" data-name="Juego de Cama" data-price="189.90"
+                    data-image="img/juegoDeCamaStitch.jpg">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/juegoDeCamaStitch.jpg" alt="Juego de Cama">
+                    <h3>Juego de Cama</h3>
+                    <div class="price"><span class="current-price">S/ 189.90</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 28 -->
+                <div class="product-card" data-id="128" data-name="Funda para Laptop" data-price="62.50"
+                    data-image="img/fundLaptopStitch.png">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/fundLaptopStitch.png" alt="Funda para Laptop">
+                    <h3>Funda para Laptop</h3>
+                    <div class="price"><span class="current-price">S/ 62.50</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 29 -->
+                <div class="product-card" data-id="129" data-name="Reloj de Pared" data-price="55.00"
+                    data-image="img/relojDeParedStitch.webp">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/relojDeParedStitch.webp" alt="Reloj de Pared">
+                    <h3>Reloj de Pared</h3>
+                    <div class="price"><span class="current-price">S/ 55.00</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+
+                <!-- PRODUCTO 30 -->
+                <div class="product-card" data-id="130" data-name="Set de Resaltadores" data-price="34.90"
+                    data-image="img/SetResaltadoresStitch.jpeg">
+                    <button class="wishlist-btn" title="Agregar a favoritos"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <img src="img/SetResaltadoresStitch.jpeg" alt="Set de Resaltadores">
+                    <h3>Set de Resaltadores</h3>
+                    <div class="price"><span class="current-price">S/ 34.90</span></div>
+                    <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-column">
+                <h4>KOKY</h4>
+                <p>Tu tienda de librería, arte y regalería favorita.</p>
+                <div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i
+                            class="fab fa-tiktok"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+            </div>
+            <div class="footer-column">
+                <h4>Links Útiles</h4>
+                <ul>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Política de Devolución</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Mi Cuenta</h4>
+                <ul>
+                    <li><a href="#">Ingresar</a></li>
+                    <li><a href="#">Mis Pedidos</a></li>
+                    <li><a href="#">Seguimiento de Envío</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Medios de pago</h4><img src="https://placehold.co/200x40/EFEFEF/333?text=Medios+de+Pago"
+                    alt="Medios de pago" class="payment-methods">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 KOKY. Con orgullo desde Huancayo, Perú.</p>
+            <p style="margin-top: 10px;">
+                <a href="reclamaciones.html" style="color: #fff; text-decoration: underline;">
+                    <i class="fa-solid fa-book"></i> Libro de Reclamaciones
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modales -->
+    <div class="modal-overlay" id="auth-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+            <div id="login-view">
+                <div class="modal-header">
+                    <h2>Inicia sesión para comprar</h2>
+                    <p>Usa tu cuenta para ingresar a la tienda KOKY.</p>
+                </div>
+                <form class="login-form" id="login-form">
+                    <div class="form-group"><label for="login-email">Correo electrónico</label><input type="email"
+                            id="login-email" placeholder="Ingresa tu correo electrónico" required></div>
+                    <div class="form-group"><label for="login-password">Contraseña</label><input type="password"
+                            id="login-password" placeholder="Ingresa tu contraseña" required></div><a href="#"
+                        class="forgot-password">¿Olvidaste tu contraseña?</a><button type="submit"
+                        class="btn btn-primary btn-full-width">Ingresar</button>
+                </form>
+                <div class="modal-footer"><span>¿Aún no tienes cuenta? <a href="#"
+                            id="show-register-view">Regístrate</a></span></div>
+            </div>
+            <div id="register-view" style="display: none;">
+                <div class="modal-header">
+                    <h2>Crea tu cuenta</h2>
+                    <p>Es rápido y fácil.</p>
+                </div>
+                <form class="register-form" id="register-form">
+                    <div class="form-group"><label for="register-name">Nombre</label><input type="text"
+                            id="register-name" placeholder="Ingresa tu nombre" required></div>
+                    <div class="form-group"><label for="register-email">Correo electrónico</label><input type="email"
+                            id="register-email" placeholder="Ingresa tu correo electrónico" required></div>
+                    <div class="form-group"><label for="register-password">Contraseña</label><input type="password"
+                            id="register-password" placeholder="Crea una contraseña" required></div><button
+                        type="submit" class="btn btn-primary btn-full-width">Crear cuenta</button>
+                </form>
+                <div class="modal-footer"><span>¿Ya tienes una cuenta? <a href="#" id="show-login-view">Inicia
+                            sesión</a></span></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="add-to-cart-modal">
+        <div class="modal-content add-to-cart-modal-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+            <div class="modal-body">
+                <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+                <div class="product-info">
+                    <h3>Producto agregado a tu Carro</h3>
+                    <div class="product-details"><img id="modal-product-image" src="" alt="Producto">
+                        <div>
+                            <p id="modal-product-name"></p><b id="modal-product-price"></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions"><button class="btn btn-tertiary" id="continue-shopping-btn">Seguir
+                    comprando</button><a href="carrito.html" class="btn btn-secondary">Ir al Carro</a></div>
+        </div>
+    </div>
+    <a href="https://wa.me/51999999999?text=Hola!%20Tengo%20una%20consulta%20desde%20la%20web%20de%20KOKY"
+        class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Scripts -->
+    <script src="js olds/script.js" defer></script>
+    <script src="js/loader.js" defer></script>
+    <script src="js olds/carrito.js" defer></script>
+    <script src="js/wishlist-logic.js" defer></script> <!-- IMPORTANTE: El script de favoritos -->
+</body>
+
+</html>

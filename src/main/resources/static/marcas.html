@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcas y Temáticas - KOKY</title>
+
+    <!-- Enlaces a los mismos estilos y fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <span><i class="fa-solid fa-bolt"></i> 3 cuotas sin interés</span>
+            <span><i class="fa-solid fa-truck"></i> Envíos a todo el Perú</span>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">KOKY</a>
+            <form class="search-bar" id="search-form">
+                <input type="search" id="search-input" placeholder="Buscar productos, marcas y más...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div class="user-menu" id="user-menu-logged-out">
+                <div class="user-menu-trigger"><span>Hola, <br><b>Inicia sesión</b></span><i
+                        class="fa-solid fa-chevron-down"></i></div>
+                <ul class="user-dropdown">
+                    <li><a href="#" class="open-login-modal">Inicia sesión</a></li>
+                    <li><a href="#" class="open-register-modal">Regístrate</a></li>
+                    <li><a href="perfil.html">Mi cuenta</a></li>
+                </ul>
+            </div>
+            <div class="user-menu" id="user-menu-logged-in" style="display: none;">
+                <div class="user-menu-trigger"><span id="welcome-message"></span><i
+                        class="fa-solid fa-chevron-down"></i></div>
+                <ul class="user-dropdown">
+                    <li><a href="perfil.html">Mi cuenta</a></li>
+                    <li><a href="mis-puntos.html">Mis Puntos</a></li>
+                    <li><a href="mis-compras.html">Mis Compras</a></li>
+                    <li><a href="#" id="logout-btn">Cerrar sesión</a></li>
+                </ul>
+            </div>
+            <a href="carrito.html" aria-label="Carrito de compras" class="cart-icon"><i
+                    class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">¡NOVEDADES!</a></li>
+                <li><a href="tendencias.html">PRODUCTOS EN TENDENCIA</a></li>
+                <li><a href="escolar.html">ESCOLAR</a></li>
+                <li><a href="oficina.html">OFICINA</a></li>
+                <li><a href="regaleria.html">REGALERÍA</a></li>
+                <li><a href="marcas.html" class="active">MARCAS & TEMÁTICAS</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container" style="padding-top: 60px; padding-bottom: 60px;">
+            <h2 class="section-title">Nuestras Marcas y Temáticas</h2>
+
+            <div class="product-grid">
+                <!-- 30 productos de marcas y temáticas -->
+                <div class="product-card" data-id="501" data-name="Set Completo Harry Potter" data-price="159.90"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+1"><img
+                        src="img/set completo harry potter.jpg" alt="Set Harry Potter">
+                    <h3>Set Completo Harry Potter</h3>
+                    <div class="price"><span class="current-price">S/ 159.90</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="502" data-name="Mochila Marvel Avengers" data-price="119.90"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+2"><img
+                        src="img/mochila marve avengers.webp" alt="Mochila Marvel">
+                    <h3>Mochila Marvel Avengers</h3>
+                    <div class="price"><span class="current-price">S/ 119.90</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="503" data-name="Agenda Hello Kitty 2025" data-price="49.90"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+3"><img
+                        src="img/agenda hola demonio.webp" alt="Agenda Hello Kitty">
+                    <h3>Agenda Hello Kitty 2025</h3>
+                    <div class="price"><span class="current-price">S/ 49.90</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="504" data-name="Stabilo Boss Pastel x6" data-price="38.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+4"><img
+                        src="img/estabilo boss pastel.webp" alt="Stabilo Boss Pastel">
+                    <h3>Stabilo Boss Pastel x6</h3>
+                    <div class="price"><span class="current-price">S/ 38.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="505" data-name="Cuaderno Star Wars" data-price="26.50"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+5"><img
+                        src="img/cuaderno star wars.webp" alt="Cuaderno Star Wars">
+                    <h3>Cuaderno Star Wars</h3>
+                    <div class="price"><span class="current-price">S/ 26.50</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="506" data-name="Faber-Castell Pitt Artist Pens" data-price="75.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+6"><img
+                        src="img/faber castell pitt artist.webp" alt="Faber-Castell Pitt">
+                    <h3>Faber-Castell Pitt Artist</h3>
+                    <div class="price"><span class="current-price">S/ 75.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="507" data-name="Lonchera Disney Princesas" data-price="52.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+7"><img
+                        src="img/lonchera disney princesas.webp" alt="Lonchera Disney">
+                    <h3>Lonchera Disney Princesas</h3>
+                    <div class="price"><span class="current-price">S/ 52.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="508" data-name="Taza Cerámica Batman" data-price="39.90"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+8"><img
+                        src="img/taza ceramica batman.jpg" alt="Taza Batman">
+                    <h3>Taza Cerámica Batman</h3>
+                    <div class="price"><span class="current-price">S/ 39.90</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="509" data-name="Pilot Frixion Clicker x3" data-price="25.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+9"><img
+                        src="img/Pilot Frixion Clicker x3.jpg" alt="Pilot Frixion">
+                    <h3>Pilot Frixion Clicker x3</h3>
+                    <div class="price"><span class="current-price">S/ 25.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="510" data-name="Peluche Pikachu 25cm" data-price="79.90"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+10"><img
+                        src="img/peluche pikachu.png" alt="Peluche Pikachu">
+                    <h3>Peluche Pikachu 25cm</h3>
+                    <div class="price"><span class="current-price">S/ 79.90</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="511" data-name="Juego de Cartas UNO" data-price="29.90"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+11"><img
+                        src="img/juego de cartas UNO.webp" alt="Juego UNO">
+                    <h3>Juego de Cartas UNO</h3>
+                    <div class="price"><span class="current-price">S/ 29.90</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="512" data-name="Libreta Moleskine Clásica" data-price="85.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+12"><img
+                        src="img/Libreta Moleskine Clásica.webp" alt="Libreta Moleskine">
+                    <h3>Libreta Moleskine Clásica</h3>
+                    <div class="price"><span class="current-price">S/ 85.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="513" data-name="Botella Térmica Klean Kanteen" data-price="110.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+13"><img
+                        src="img/Botella Klean Kanteen.webp" alt="Botella Klean Kanteen">
+                    <h3>Botella Klean Kanteen</h3>
+                    <div class="price"><span class="current-price">S/ 110.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="514" data-name="Colores Polychromos Faber-Castell"
+                    data-price="150.00" data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+14"><img
+                        src="img/COLORES POLYCROMOS.webp" alt="Colores Polychromos">
+                    <h3>Colores Polychromos</h3>
+                    <div class="price"><span class="current-price">S/ 150.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="515" data-name="Set Escolar Paw Patrol" data-price="78.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+15"><img
+                        src="img/SET ESCOLAR PAW PATROL.webp" alt="Set Paw Patrol">
+                    <h3>Set Escolar Paw Patrol</h3>
+                    <div class="price"><span class="current-price">S/ 78.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="516" data-name="Pintura Acrílica Liquitex" data-price="18.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+16"><img
+                        src="img/pintura acrilica liquitex.webp" alt="Pintura Liquitex">
+                    <h3>Pintura Acrílica Liquitex</h3>
+                    <div class="price"><span class="current-price">S/ 18.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="517" data-name="Taza Friends Central Perk" data-price="42.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+17"><img
+                        src="img/taza friends central perk.webp" alt="Taza Friends">
+                    <h3>Taza Friends Central Perk</h3>
+                    <div class="price"><span class="current-price">S/ 42.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="518" data-name="Block Canson Acuarela" data-price="35.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+18"><img
+                        src="img/block canson acuarela.webp" alt="Block Canson">
+                    <h3>Block Canson Acuarela</h3>
+                    <div class="price"><span class="current-price">S/ 35.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="519" data-name="Juego de Construcción LEGO" data-price="99.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+19"><img
+                        src="img/juego de construccion lego.webp" alt="Juego LEGO">
+                    <h3>Juego de Construcción LEGO</h3>
+                    <div class="price"><span class="current-price">S/ 99.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="520" data-name="Mochila Kuromi (Sanrio)" data-price="125.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+20"><img
+                        src="img/mochila kuromi sanrio.webp" alt="Mochila Kuromi">
+                    <h3>Mochila Kuromi (Sanrio)</h3>
+                    <div class="price"><span class="current-price">S/ 125.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="521" data-name="Portaminas Pentel GraphGear" data-price="45.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+21"><img
+                        src="img/portaminas pentel.webp" alt="Portaminas Pentel">
+                    <h3>Portaminas Pentel</h3>
+                    <div class="price"><span class="current-price">S/ 45.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="522" data-name="Funko Pop! Spider-Man" data-price="75.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+22"><img
+                        src="img/funkoPop spiderman.jpeg" alt="Funko Spider-Man">
+                    <h3>Funko Pop! Spider-Man</h3>
+                    <div class="price"><span class="current-price">S/ 75.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="523" data-name="Lápices de Grafito Staedtler" data-price="24.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+23"><img
+                        src="img/Lapices Staedtler x12.webp" alt="Lápices Staedtler">
+                    <h3>Lápices Staedtler x12</h3>
+                    <div class="price"><span class="current-price">S/ 24.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="524" data-name="Cuaderno Inteligente Rocketbook" data-price="150.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+24"><img
+                        src="img/Rocketbook Inteligente.webp" alt="Cuaderno Rocketbook">
+                    <h3>Rocketbook Inteligente</h3>
+                    <div class="price"><span class="current-price">S/ 150.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="525" data-name="Saga Completa Harry Potter (Libros)"
+                    data-price="450.00" data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+25"><img
+                        src="img/Saga Completa Harry Potter.webp" alt="Saga Harry Potter">
+                    <h3>Saga Completa Harry Potter</h3>
+                    <div class="price"><span class="current-price">S/ 450.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="526" data-name="Artesco Set de Escritorio" data-price="42.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+26"><img
+                        src="img/Artesco Set Escritorio.webp" alt="Set Artesco">
+                    <h3>Artesco Set Escritorio</h3>
+                    <div class="price"><span class="current-price">S/ 42.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="527" data-name="Termo Contigo" data-price="95.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+27"><img src="img/termo contigo.webp"
+                        alt="Termo Contigo">
+                    <h3>Termo Contigo</h3>
+                    <div class="price"><span class="current-price">S/ 95.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="528" data-name="Taza de Viaje Minions" data-price="38.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+28"><img
+                        src="img/taza de viaje minions.webp" alt="Taza Minions">
+                    <h3>Taza de Viaje Minions</h3>
+                    <div class="price"><span class="current-price">S/ 38.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="529" data-name="Marcadores Sharpie x24" data-price="68.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+29"><img
+                        src="img/Marcadores Sharpie x24.webp" alt="Marcadores Sharpie">
+                    <h3>Marcadores Sharpie x24</h3>
+                    <div class="price"><span class="current-price">S/ 68.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="530" data-name="Figuras de Acción Dragon Ball" data-price="55.00"
+                    data-image="https://placehold.co/300x300/d8e2dc/333?text=Marca+30"><img
+                        src="img/FIGURA DRAGON ARMAS BALL.jpeg" alt="Figuras Dragon Ball">
+                    <h3>Figura Dragon Ball</h3>
+                    <div class="price"><span class="current-price">S/ 55.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-column">
+                <h4>KOKY</h4>
+                <p>Tu tienda de librería, arte y regalería favorita.</p>
+                <div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i
+                            class="fab fa-tiktok"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+            </div>
+            <div class="footer-column">
+                <h4>Links Útiles</h4>
+                <ul>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Política de Devolución</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Mi Cuenta</h4>
+                <ul>
+                    <li><a href="#">Ingresar</a></li>
+                    <li><a href="#">Mis Pedidos</a></li>
+                    <li><a href="#">Seguimiento de Envío</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Medios de pago</h4><img src="https://placehold.co/200x40/EFEFEF/333?text=Medios+de+Pago"
+                    alt="Medios de pago" class="payment-methods">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 KOKY. Con orgullo desde Huancayo, Perú.</p>
+            <p style="margin-top: 10px;">
+                <a href="reclamaciones.html" style="color: #fff; text-decoration: underline;">
+                    <i class="fa-solid fa-book"></i> Libro de Reclamaciones
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modales -->
+    <div class="modal-overlay" id="auth-modal">
+        <div class="modal-content"><button class="modal-close" aria-label="Cerrar">&times;</button>
+            <div id="login-view">
+                <div class="modal-header">
+                    <h2>Inicia sesión para comprar</h2>
+                    <p>Usa tu cuenta para ingresar a la tienda KOKY.</p>
+                </div>
+                <form class="login-form" id="login-form">
+                    <div class="form-group"><label for="login-email">Correo electrónico</label><input type="email"
+                            id="login-email" placeholder="Ingresa tu correo electrónico" required></div>
+                    <div class="form-group"><label for="login-password">Contraseña</label><input type="password"
+                            id="login-password" placeholder="Ingresa tu contraseña" required></div><a href="#"
+                        class="forgot-password">¿Olvidaste tu contraseña?</a><button type="submit"
+                        class="btn btn-primary btn-full-width">Ingresar</button>
+                </form>
+                <div class="modal-footer"><span>¿Aún no tienes cuenta? <a href="#"
+                            id="show-register-view">Regístrate</a></span></div>
+            </div>
+            <div id="register-view" style="display: none;">
+                <div class="modal-header">
+                    <h2>Crea tu cuenta</h2>
+                    <p>Es rápido y fácil.</p>
+                </div>
+                <form class="register-form" id="register-form">
+                    <div class="form-group"><label for="register-name">Nombre</label><input type="text"
+                            id="register-name" placeholder="Ingresa tu nombre" required></div>
+                    <div class="form-group"><label for="register-email">Correo electrónico</label><input type="email"
+                            id="register-email" placeholder="Ingresa tu correo electrónico" required></div>
+                    <div class="form-group"><label for="register-password">Contraseña</label><input type="password"
+                            id="register-password" placeholder="Crea una contraseña" required></div><button
+                        type="submit" class="btn btn-primary btn-full-width">Crear cuenta</button>
+                </form>
+                <div class="modal-footer"><span>¿Ya tienes una cuenta? <a href="#" id="show-login-view">Inicia
+                            sesión</a></span></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="add-to-cart-modal">
+        <div class="modal-content add-to-cart-modal-content"><button class="modal-close"
+                aria-label="Cerrar">&times;</button>
+            <div class="modal-body">
+                <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+                <div class="product-info">
+                    <h3>Producto agregado a tu Carro</h3>
+                    <div class="product-details"><img id="modal-product-image" src="" alt="Producto">
+                        <div>
+                            <p id="modal-product-name"></p><b id="modal-product-price"></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions"><button class="btn btn-tertiary" id="continue-shopping-btn">Seguir
+                    comprando</button><a href="carrito.html" class="btn btn-secondary">Ir al Carro</a></div>
+        </div>
+    </div>
+    <a href="https://wa.me/51999999999?text=Hola!%20Tengo%20una%20consulta%20desde%20la%20web%20de%20KOKY"
+        class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+
+    <!-- Scripts -->
+    <script src="js olds/script.js" defer></script>
+    <script src="js/loader.js" defer></script>
+    <script src="js olds/carrito.js" defer></script>
+    <script src="js/wishlist-logic.js" defer></script>
+</body>
+
+</html>

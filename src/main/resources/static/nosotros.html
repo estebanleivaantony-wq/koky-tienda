@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - KOKY</title>
+
+    <!-- Enlaces a los mismos estilos y fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <span><i class="fa-solid fa-bolt"></i> 3 cuotas sin interés</span>
+            <span><i class="fa-solid fa-truck"></i> Envíos a todo el Perú</span>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">KOKY</a>
+            <form class="search-bar" id="search-form">
+                <input type="search" id="search-input" placeholder="Buscar productos, marcas y más...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div class="user-menu" id="user-menu-logged-out">
+                <div class="user-menu-trigger"><span>Hola, <br><b>Inicia sesión</b></span><i
+                        class="fa-solid fa-chevron-down"></i></div>
+                <ul class="user-dropdown">
+                    <li><a href="#" class="open-login-modal">Inicia sesión</a></li>
+                    <li><a href="#" class="open-register-modal">Regístrate</a></li>
+                    <li><a href="perfil.html">Mi cuenta</a></li>
+                </ul>
+            </div>
+            <div class="user-menu" id="user-menu-logged-in" style="display: none;">
+                <div class="user-menu-trigger"><span id="welcome-message"></span><i
+                        class="fa-solid fa-chevron-down"></i></div>
+                <ul class="user-dropdown">
+                    <li><a href="perfil.html">Mi cuenta</a></li>
+                    <li><a href="mis-puntos.html">Mis Puntos</a></li>
+                    <li><a href="mis-compras.html">Mis Compras</a></li>
+                    <li><a href="#" id="logout-btn">Cerrar sesión</a></li>
+                </ul>
+            </div>
+            <a href="carrito.html" aria-label="Carrito de compras" class="cart-icon"><i
+                    class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">¡NOVEDADES!</a></li>
+                <li><a href="tendencias.html">PRODUCTOS EN TENDENCIA</a></li>
+                <li><a href="escolar.html">ESCOLAR</a></li>
+                <li><a href="oficina.html">OFICINA</a></li>
+                <li><a href="regaleria.html">REGALERÍA</a></li>
+                <li><a href="marcas.html">MARCAS & TEMÁTICAS</a></li>
+                <li><a href="nosotros.html" class="active">NOSOTROS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="about-us-hero">
+            <div class="container">
+                <h1>Más que una tienda, somos tu cómplice creativo</h1>
+                <p>Descubre la historia y la pasión detrás de cada producto KOKY</p>
+            </div>
+        </section>
+
+        <section class="mission-vision-section">
+            <div class="container">
+                <h2 class="section-title fade-in-section">Nuestra Esencia</h2>
+                <div class="essence-grid">
+                    <div class="essence-card fade-in-section"><i class="fa-solid fa-paper-plane"></i>
+                        <h3>Nuestro Propósito (Misión)</h3>
+                        <p>Somos cómplices de tu creatividad. Facilitamos momentos de inspiración a través de
+                            herramientas que dan vida a tus ideas y afecto, desde el apunte que organiza un sueño hasta
+                            el regalo que dice "estoy aquí".</p>
+                    </div>
+                    <div class="essence-card fade-in-section"><i class="fa-solid fa-heart-pulse"></i>
+                        <h3>Nuestros Valores</h3>
+                        <p><strong>Calidez:</strong> Cada interacción cuenta. <strong>Curiosidad:</strong> Siempre
+                            buscando lo nuevo y sorprendente. <strong>Comunidad:</strong> Unimos a apasionados por
+                            crear, aprender y regalar con significado.</p>
+                    </div>
+                    <div class="essence-card fade-in-section"><i class="fa-solid fa-map-location-dot"></i>
+                        <h3>Nuestro Horizonte (Visión)</h3>
+                        <p>Ser el corazón creativo de Huancayo y un referente de confianza para todo el Perú. El lugar
+                            donde cada persona encuentre no solo lo que busca, sino también una chispa de inspiración
+                            que no esperaba.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="our-history-section">
+            <div class="container">
+                <div class="history-content fade-in-section">
+                    <div class="history-text">
+                        <h2 class="section-title" style="text-align: left;">Creciendo Contigo en el Corazón del Valle
+                        </h2>
+                        <p>Macrotiendas Koky sigue creciendo en nuestra región, gozando de la aceptación y preferencia
+                            de sus clientes. Hace unos días, se realizó la inauguración de una nueva sucursal en la
+                            Ciudad Universitaria, demostrando que estamos cada vez más cerca con productos de calidad al
+                            alcance de todos.</p>
+                        <div class="history-highlight"><i class="fa-solid fa-store"></i>
+                            <div><strong>Próximos a cumplir 41 años en el Valle del Mantaro,</strong> ya contamos con
+                                nueve sucursales en Huancayo, El Tambo, Chilca, Concepción y Chupaca, lo que evidencia
+                                que la buena atención y servicio al cliente son nuestra carta de presentación.</div>
+                        </div>
+                    </div>
+                    <div class="history-image"><img
+                            src="https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=2070"
+                            alt="Tienda KOKY mostrando variedad de productos"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section fade-in-section">
+            <div class="container">
+                <h2 class="section-title">Siempre a un paso más para las familias Peruanas - Tiendas KOKY</h2>
+                <div class="stats-grid">
+                    <div class="stat-item"><span class="stat-number" data-target="41">0</span>
+                        <p>Años de Historia</p>
+                    </div>
+                    <div class="stat-item"><span class="stat-number" data-target="9">0</span>
+                        <p>Sucursales en la Región</p>
+                    </div>
+                    <div class="stat-item"><span class="stat-number" data-target="15000">0</span>
+                        <p>Productos Disponibles</p>
+                    </div>
+                    <div class="stat-item"><span class="stat-number" data-target="100">0</span><span>%</span>
+                        <p>Pasión por lo que Hacemos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="location-section">
+            <div class="container">
+                <h2 class="section-title fade-in-section">Visítanos en Nuestra Tienda Principal</h2>
+                <div class="location-grid fade-in-section">
+                    <div class="location-details">
+                        <h3>KOKY - Huancayo</h3>
+                        <p class="address"><i class="fa-solid fa-location-dot"></i>Ca. Real 976, Huancayo 12001</p>
+                        <p class="hours"><i class="fa-solid fa-clock"></i><strong>Lunes a Sábado:</strong> 9:00 AM -
+                            8:00 PM <br><strong>Domingos:</strong> 10:00 AM - 2:00 PM</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Calle+Real+976+Huancayo"
+                            target="_blank" class="btn btn-primary">Ver en Google Maps</a>
+                    </div>
+                    <div class="location-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.986345631483!2d-75.2100866851873!3d-12.04276799147189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910e9643441a12e9%3A0x685a218f4088a2f8!2sCa.+Real+976%2C+Huancayo+12001!5e0!3m2!1ses!2spe!4v1672345678901!5m2!1ses!2spe"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-column">
+                <h4>KOKY</h4>
+                <p>Tu tienda de librería, arte y regalería favorita.</p>
+                <div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i
+                            class="fab fa-tiktok"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+            </div>
+            <div class="footer-column">
+                <h4>Links Útiles</h4>
+                <ul>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Política de Devolución</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Mi Cuenta</h4>
+                <ul>
+                    <li><a href="#">Ingresar</a></li>
+                    <li><a href="#">Mis Pedidos</a></li>
+                    <li><a href="#">Seguimiento de Envío</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Medios de pago</h4><img src="https://placehold.co/200x40/EFEFEF/333?text=Medios+de+Pago"
+                    alt="Medios de pago" class="payment-methods">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 KOKY. Con orgullo desde Huancayo, Perú.</p>
+            <p style="margin-top: 10px;">
+                <a href="reclamaciones.html" style="color: #fff; text-decoration: underline;">
+                    <i class="fa-solid fa-book"></i> Libro de Reclamaciones
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- ===== SECCIÓN DE MODALES Y SCRIPTS CORREGIDA ===== -->
+
+    <!-- Modal de Login/Registro -->
+    <div class="modal-overlay" id="auth-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+            <div id="login-view">
+                <div class="modal-header">
+                    <h2>Inicia sesión para comprar</h2>
+                    <p>Usa tu cuenta para ingresar a la tienda KOKY.</p>
+                </div>
+                <form class="login-form" id="login-form">
+                    <div class="form-group"><label for="login-email">Correo electrónico</label><input type="email"
+                            id="login-email" placeholder="Ingresa tu correo electrónico" required></div>
+                    <div class="form-group"><label for="login-password">Contraseña</label><input type="password"
+                            id="login-password" placeholder="Ingresa tu contraseña" required></div><a href="#"
+                        class="forgot-password">¿Olvidaste tu contraseña?</a><button type="submit"
+                        class="btn btn-primary btn-full-width">Ingresar</button>
+                </form>
+                <div class="modal-footer"><span>¿Aún no tienes cuenta? <a href="#"
+                            id="show-register-view">Regístrate</a></span></div>
+            </div>
+            <div id="register-view" style="display: none;">
+                <div class="modal-header">
+                    <h2>Crea tu cuenta</h2>
+                    <p>Es rápido y fácil.</p>
+                </div>
+                <form class="register-form" id="register-form">
+                    <div class="form-group"><label for="register-name">Nombre</label><input type="text"
+                            id="register-name" placeholder="Ingresa tu nombre" required></div>
+                    <div class="form-group"><label for="register-email">Correo electrónico</label><input type="email"
+                            id="register-email" placeholder="Ingresa tu correo electrónico" required></div>
+                    <div class="form-group"><label for="register-password">Contraseña</label><input type="password"
+                            id="register-password" placeholder="Crea una contraseña" required></div><button
+                        type="submit" class="btn btn-primary btn-full-width">Crear cuenta</button>
+                </form>
+                <div class="modal-footer"><span>¿Ya tienes una cuenta? <a href="#" id="show-login-view">Inicia
+                            sesión</a></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Producto Agregado -->
+    <div class="modal-overlay" id="add-to-cart-modal">
+        <div class="modal-content add-to-cart-modal-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+            <div class="modal-body">
+                <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+                <div class="product-info">
+                    <h3>Producto agregado a tu Carro</h3>
+                    <div class="product-details"><img id="modal-product-image" src="" alt="Producto">
+                        <div>
+                            <p id="modal-product-name"></p><b id="modal-product-price"></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions"><button class="btn btn-tertiary" id="continue-shopping-btn">Seguir
+                    comprando</button><a href="carrito.html" class="btn btn-secondary">Ir al Carro</a></div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/51999999999?text=Hola!%20Tengo%20una%20consulta%20desde%20la%20web%20de%20KOKY"
+        class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js olds/script.js" defer></script>
+    <script src="js olds/carrito.js" defer></script>
+    <script src="js olds/nosotros.js" defer></script>
+</body>
+
+</html>

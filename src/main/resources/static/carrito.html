@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Carrito - KOKY</title>
+
+    <!-- Enlaces a los mismos estilos y fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <span><i class="fa-solid fa-bolt"></i> 3 cuotas sin interés</span>
+            <span><i class="fa-solid fa-truck"></i> Envíos a todo el Perú</span>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">KOKY</a>
+            <form class="search-bar" id="search-form">
+                <input type="search" id="search-input" placeholder="Buscar productos, marcas y más...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div class="user-actions">
+                <div class="user-menu" id="user-menu-logged-out">
+                    <div class="user-menu-trigger"><span>Hola, <br><b>Inicia sesión</b></span><i
+                            class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="user-dropdown">
+                        <li><a href="#" class="open-login-modal">Inicia sesión</a></li>
+                        <li><a href="#" class="open-register-modal">Regístrate</a></li>
+                        <li><a href="perfil.html">Mi cuenta</a></li>
+                    </ul>
+                </div>
+                <div class="user-menu" id="user-menu-logged-in" style="display: none;">
+                    <div class="user-menu-trigger"><span id="welcome-message"></span><i
+                            class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="user-dropdown">
+                        <li><a href="perfil.html">Mi cuenta</a></li>
+                        <li><a href="mis-puntos.html">Mis Puntos</a></li>
+                        <li><a href="mis-compras.html">Mis Compras</a></li>
+                        <li><a href="#" id="logout-btn">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+                <a href="carrito.html" aria-label="Carrito de compras" class="cart-icon"><i
+                        class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">¡NOVEDADES!</a></li>
+                <li><a href="tendencias.html">PRODUCTOS EN TENDENCIA</a></li>
+                <li><a href="escolar.html">ESCOLAR</a></li>
+                <li><a href="oficina.html">OFICINA</a></li>
+                <li><a href="regaleria.html">REGALERÍA</a></li>
+                <li><a href="marcas.html">MARCAS & TEMÁTICAS</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="cart-page-main">
+        <div class="container">
+            <div class="cart-header">
+                <h2>Carro (<span id="cart-product-count">0 productos</span>)</h2>
+            </div>
+            <div class="cart-container">
+                <div class="cart-items-section">
+                    <div class="cart-vendor-group">
+                        <div class="vendor-header">
+                            <span>Vendido por <strong>KOKY</strong></span>
+                        </div>
+                        <div id="cart-item-list"></div>
+                        <div class="cart-empty" id="cart-empty-message" style="display: none;">
+                            <i class="fa-solid fa-cart-arrow-down"></i>
+                            <h3>Tu carrito está vacío</h3>
+                            <p>¡Miles de productos te esperan!</p>
+                            <a href="index.html" class="btn btn-primary">Ver productos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-summary-section">
+                    <div class="cart-summary" id="cart-summary-box" style="display: none;">
+                        <h3>Resumen de la orden</h3>
+                        <div class="summary-line">
+                            <span>Productos (<span id="summary-product-count">0</span>)</span>
+                            <span id="summary-subtotal">S/ 0.00</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Envío</span>
+                            <span id="summary-shipping">S/ 0.00</span>
+                        </div>
+
+                        <!-- ===== ESTA ES LA LÍNEA AÑADIDA ===== -->
+                        <div class="summary-line discount-line" id="summary-discount-line" style="display: none;">
+                            <span>Descuento (Cupón)</span>
+                            <span id="summary-discount"> -S/ 0.00</span>
+                        </div>
+
+                        <div class="coupon-input-group">
+                            <input type="text" id="coupon-input" placeholder="Ingresar cupón de descuento">
+                            <button class="btn-apply-coupon" id="apply-coupon-btn">Aplicar</button>
+                        </div>
+                        <div class="summary-line total">
+                            <span>Total</span>
+                            <span id="summary-total">S/ 0.00</span>
+                        </div>
+                        <button class="btn btn-secondary btn-full-width checkout-btn" id="checkout-btn">Continuar
+                            compra</button>
+                        <div class="yape-payment-option">
+                            <img src="https://logosenvector.com/logo/img/yape-bcp-4390.jpg" alt="Yape">
+                            <span>¡Ahora puedes pagar con Yape!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-column">
+                <h4>KOKY</h4>
+                <p>Tu tienda de librería, arte y regalería favorita.</p>
+                <div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i
+                            class="fab fa-tiktok"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+            </div>
+            <div class="footer-column">
+                <h4>Links Útiles</h4>
+                <ul>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Política de Devolución</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Mi Cuenta</h4>
+                <ul>
+                    <li><a href="#">Ingresar</a></li>
+                    <li><a href="#">Mis Pedidos</a></li>
+                    <li><a href="#">Seguimiento de Envío</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Medios de pago</h4><img src="https://placehold.co/200x40/EFEFEF/333?text=Medios+de+Pago"
+                    alt="Medios de pago" class="payment-methods">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 KOKY. Con orgullo desde Huancayo, Perú.</p>
+            <p style="margin-top: 10px;">
+                <a href="reclamaciones.html" style="color: #fff; text-decoration: underline;">
+                    <i class="fa-solid fa-book"></i> Libro de Reclamaciones
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modal de Login/Registro -->
+    <div class="modal-overlay" id="auth-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+            <div id="login-view">
+                <div class="modal-header">
+                    <h2>Inicia sesión para comprar</h2>
+                    <p>Usa tu cuenta para ingresar a la tienda KOKY.</p>
+                </div>
+                <form class="login-form" id="login-form">
+                    <div class="form-group"><label for="login-email">Correo electrónico</label><input type="email"
+                            id="login-email" placeholder="Ingresa tu correo electrónico" required></div>
+                    <div class="form-group"><label for="login-password">Contraseña</label><input type="password"
+                            id="login-password" placeholder="Ingresa tu contraseña" required></div><a href="#"
+                        class="forgot-password">¿Olvidaste tu contraseña?</a><button type="submit"
+                        class="btn btn-primary btn-full-width">Ingresar</button>
+                </form>
+                <div class="modal-footer"><span>¿Aún no tienes cuenta? <a href="#"
+                            id="show-register-view">Regístrate</a></span></div>
+            </div>
+            <div id="register-view" style="display: none;">
+                <div class="modal-header">
+                    <h2>Crea tu cuenta</h2>
+                    <p>Es rápido y fácil.</p>
+                </div>
+                <form class="register-form" id="register-form">
+                    <div class="form-group"><label for="register-name">Nombre</label><input type="text"
+                            id="register-name" placeholder="Ingresa tu nombre" required></div>
+                    <div class="form-group"><label for="register-email">Correo electrónico</label><input type="email"
+                            id="register-email" placeholder="Ingresa tu correo electrónico" required></div>
+                    <div class="form-group"><label for="register-password">Contraseña</label><input type="password"
+                            id="register-password" placeholder="Crea una contraseña" required></div><button
+                        type="submit" class="btn btn-primary btn-full-width">Crear cuenta</button>
+                </form>
+                <div class="modal-footer"><span>¿Ya tienes una cuenta? <a href="#" id="show-login-view">Inicia
+                            sesión</a></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Producto Agregado -->
+    <div class="modal-overlay" id="add-to-cart-modal">
+        <div class="modal-content add-to-cart-modal-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+            <div class="modal-body">
+                <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+                <div class="product-info">
+                    <h3>Producto agregado a tu Carro</h3>
+                    <div class="product-details"><img id="modal-product-image" src="" alt="Producto">
+                        <div>
+                            <p id="modal-product-name"></p><b id="modal-product-price"></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions"><button class="btn btn-tertiary" id="continue-shopping-btn">Seguir
+                    comprando</button><a href="carrito.html" class="btn btn-secondary">Ir al Carro</a></div>
+        </div>
+    </div>
+
+    <!-- ===== NUEVO: Modal de Pago ===== -->
+    <div class="modal-overlay" id="payment-modal">
+        <div class="modal-content payment-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+            <div class="modal-header">
+                <h2>Método de Pago</h2>
+            </div>
+            <form id="payment-form">
+                <div class="form-section">
+                    <h3>Selecciona un método de pago</h3>
+                    <div class="form-group">
+                        <label for="payment-method">Tipo de Tarjeta</label>
+                        <select id="payment-method" required>
+                            <option value="">Selecciona...</option>
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">Mastercard</option>
+                            <option value="amex">American Express</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-number">Número de tarjeta</label>
+                        <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX" required maxlength="19">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry-date">Fecha de caducidad</label>
+                            <input type="text" id="expiry-date" placeholder="MM/AA" required maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">Código de seguridad (CVV)</label>
+                            <input type="text" id="cvv" placeholder="XXX" required maxlength="4">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Información de Facturación</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="billing-name">Nombre</label>
+                            <input type="text" id="billing-name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="billing-lastname">Apellidos</label>
+                            <input type="text" id="billing-lastname" placeholder="Tus apellidos" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="billing-email">Correo electrónico</label>
+                        <input type="email" id="billing-email" placeholder="ejemplo@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="billing-address">Dirección de facturación</label>
+                        <input type="text" id="billing-address" placeholder="Av. Principal 123" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="billing-address2">Dirección de facturación (segunda línea, opcional)</label>
+                        <input type="text" id="billing-address2" placeholder="Dpto, Bloque, Ref.">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="billing-city">Ciudad</label>
+                            <input type="text" id="billing-city" placeholder="Lima" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="billing-zip">Código postal</label>
+                            <input type="text" id="billing-zip" placeholder="15001" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="billing-country">País</label>
+                            <input type="text" id="billing-country" value="Perú" readonly required>
+                        </div>
+                        <div class="form-group">
+                            <label for="billing-phone">Teléfono</label>
+                            <input type="tel" id="billing-phone" placeholder="9XXXXXXXX" required maxlength="9">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Documento de Venta</h3>
+                    <div class="form-group">
+                        <label for="document-type">Selecciona el tipo de documento</label>
+                        <select id="document-type" required>
+                            <option value="boleta">Boleta de Venta</option>
+                            <option value="factura">Factura</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="dni-group">
+                        <label for="document-dni">DNI</label>
+                        <input type="text" id="document-dni" placeholder="XXXXXXXX" maxlength="8" required>
+                    </div>
+                    <div class="form-group" id="ruc-group" style="display: none;">
+                        <label for="document-ruc">RUC</label>
+                        <input type="text" id="document-ruc" placeholder="XXXXXXXXXXX" maxlength="11">
+                    </div>
+                    <div class="form-group" id="razon-social-group" style="display: none;">
+                        <label for="document-razon-social">Razón Social</label>
+                        <input type="text" id="document-razon-social" placeholder="Nombre de la empresa">
+                    </div>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="save-payment-info">
+                    <label for="save-payment-info">Guardar mi información de pago para facilitar el proceso la próxima
+                        vez</label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full-width" id="confirm-payment-btn">Confirmar
+                    Compra</button>
+            </form>
+            <div class="payment-methods-accepted">
+                <h4>Aceptamos los siguientes métodos de pago seguro:</h4>
+                <img src="https://placehold.co/250x40/EFEFEF/333?text=Visa_Mastercard_Yape" alt="Métodos de pago">
+            </div>
+        </div>
+    </div>
+    <!-- ===== FIN Modal de Pago ===== -->
+
+    <a href="https://wa.me/51999999999?text=Hola!%20Tengo%20una%20consulta%20desde%20la%20web%20de%20KOKY"
+        class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js olds/script.js" defer></script>
+    <script src="js/loader.js" defer></script>
+    <script src="js olds/carrito.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOKY - Librería y Regalería | Desde Huancayo, Perú</title>
+
+    <!-- Google Fonts, Font Awesome, etc. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- Tu hoja de estilos -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <span><i class="fa-solid fa-bolt"></i> 3 cuotas sin interés</span>
+            <span><i class="fa-solid fa-truck"></i> Envíos a todo el Perú</span>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">KOKY</a>
+            <form class="search-bar" id="search-form">
+                <input type="search" id="search-input" placeholder="Buscar productos, marcas y más...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div class="user-actions">
+                <div class="user-menu" id="user-menu-logged-out">
+                    <div class="user-menu-trigger"><span>Hola, <br><b>Inicia sesión</b></span><i
+                            class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="user-dropdown">
+                        <li><a href="#" class="open-login-modal">Inicia sesión</a></li>
+                        <li><a href="#" class="open-register-modal">Regístrate</a></li>
+                        <li><a href="perfil.html">Mi cuenta</a></li>
+                    </ul>
+                </div>
+                <div class="user-menu" id="user-menu-logged-in" style="display: none;">
+                    <div class="user-menu-trigger"><span id="welcome-message"></span><i
+                            class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="user-dropdown">
+                        <li><a href="perfil.html">Mi cuenta</a></li>
+                        <li><a href="mis-puntos.html">Mis Puntos</a></li>
+                        <li><a href="mis-compras.html">Mis Compras</a></li>
+                        <li><a href="#" id="logout-btn">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+                <a href="carrito.html" aria-label="Carrito de compras" class="cart-icon"><i
+                        class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="active">¡NOVEDADES!</a></li>
+                <li><a href="tendencias.html">PRODUCTOS EN TENDENCIA</a></li>
+                <li><a href="escolar.html">ESCOLAR</a></li>
+                <li><a href="oficina.html">OFICINA</a></li>
+                <li><a href="regaleria.html">REGALERÍA</a></li>
+                <li><a href="marcas.html">MARCAS & TEMÁTICAS</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Descubre lo nuevo de Lilo & Stitch</h1>
+                <p>La colección más esperada ya está aquí. ¡No te quedes sin la tuya!</p>
+                <a href="tendencias.html" class="btn btn-primary">Ver colección</a>
+            </div>
+        </section>
+
+        <section class="benefits-section">
+            <div class="container">
+                <div class="benefit-item"><i class="fa-solid fa-truck-fast"></i>
+                    <div>
+                        <h4>Envíos a todo el Perú</h4>
+                        <p>Recibe tu pedido donde estés.</p>
+                    </div>
+                </div>
+                <div class="benefit-item"><i class="fa-solid fa-shield-halved"></i>
+                    <div>
+                        <h4>Compra 100% Segura</h4>
+                        <p>Tus datos siempre protegidos.</p>
+                    </div>
+                </div>
+                <div class="benefit-item"><i class="fa-solid fa-box-archive"></i>
+                    <div>
+                        <h4>Productos Originales</h4>
+                        <p>Calidad y licencias garantizadas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="promo-banner">
+            <div class="container">
+                <i class="fa-solid fa-tags"></i>
+                <h2>¡40% OFF en MOCHILAS! - Válido todo Diciembre</h2>
+                <i class="fa-solid fa-tags"></i>
+            </div>
+        </section>
+
+        <section class="product-carousel container">
+            <h2 class="section-title">Lo Nuevo en KOKY</h2>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev" aria-label="Anterior"><i
+                        class="fa-solid fa-chevron-left"></i></button>
+                <div class="carousel">
+                    <!-- PRODUCTO 1 -->
+                    <div class="product-card" data-id="1" data-name="Marcador Filgo Tinta al Agua" data-price="39.90"
+                        data-image="img/Marcador Filgo Tinta al Agua.webp">
+                        <button class="wishlist-btn" title="Agregar a favoritos"><i
+                                class="fa-regular fa-heart"></i></button>
+                        <img src="img/Marcador Filgo Tinta al Agua.webp" alt="Marcador Filgo Tinta al Agua">
+                        <h3>Marcador Filgo Tinta al Agua</h3>
+                        <div class="price"><span class="current-price">S/ 39.90</span><span class="old-price">S/
+                                52.90</span></div>
+                        <span class="discount-badge">20% OFF</span>
+                        <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                    </div>
+
+                    <!-- PRODUCTO 2 -->
+                    <div class="product-card" data-id="2" data-name="Vaso Térmico Amayra 120ml" data-price="34.90"
+                        data-image="img/Vaso Térmico Amayra 120ml.webp">
+                        <button class="wishlist-btn" title="Agregar a favoritos"><i
+                                class="fa-regular fa-heart"></i></button>
+                        <img src="img/Vaso Térmico Amayra 120ml.webp" alt="Vaso Térmico Amayra 120ml">
+                        <h3>Vaso Térmico Amayra 120ml</h3>
+                        <div class="price"><span class="current-price">S/ 34.90</span></div>
+                        <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                    </div>
+
+                    <!-- PRODUCTO 3 -->
+                    <div class="product-card" data-id="3" data-name="Marcador Acrílico Doble Punta" data-price="65.90"
+                        data-image="img/Marcador Acrílico Doble Punta.webp">
+                        <button class="wishlist-btn" title="Agregar a favoritos"><i
+                                class="fa-regular fa-heart"></i></button>
+                        <img src="img/Marcador Acrílico Doble Punta.webp" alt="Marcador Acrílico Doble Punta">
+                        <h3>Marcador Acrílico Doble Punta</h3>
+                        <div class="price"><span class="current-price">S/ 65.90</span><span class="old-price">S/
+                                82.50</span></div>
+                        <span class="discount-badge">20% OFF</span>
+                        <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                    </div>
+
+                    <!-- PRODUCTO 4 -->
+                    <div class="product-card" data-id="4" data-name="Mochila JanSport" data-price="75.50"
+                        data-image="img/Mochila JanSport.webp">
+                        <button class="wishlist-btn" title="Agregar a favoritos"><i
+                                class="fa-regular fa-heart"></i></button>
+                        <img src="img/Mochila JanSport.webp" alt="Mochila JanSport">
+                        <h3>Mochila JanSport</h3>
+                        <div class="price"><span class="current-price">S/ 75.50</span></div>
+                        <button class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                    </div>
+                </div>
+                <button class="carousel-btn next" aria-label="Siguiente"><i
+                        class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section class="category-grid-section container">
+            <h2 class="section-title">Comprar por Categoría</h2>
+            <div class="category-grid">
+                <a href="#" class="category-card"><img src="img/ESCOLAR.webp" alt="Categoría Escolar">
+                    <div class="category-card__overlay">
+                        <h3>Escolar</h3>
+                    </div>
+                </a>
+                <a href="#" class="category-card"><img src="img/OFICINA.webp" alt="Categoría Oficina">
+                    <div class="category-card__overlay">
+                        <h3>Oficina</h3>
+                    </div>
+                </a>
+                <a href="#" class="category-card"><img src="img/ARTE Y REGALOS.webp" alt="Categoría Arte y Regalos">
+                    <div class="category-card__overlay">
+                        <h3>Arte y Regalos</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="thematic-section">
+            <div class="container">
+                <h2 class="section-title">Las mejores TEMÁTICAS están acá</h2>
+                <div class="thematic-grid">
+                    <a href="#" class="thematic-item">
+                        <div class="thematic-image-wrapper"><img
+                                src="https://media.revistagq.com/photos/67ab82a832861609b37a4709/16:9/w_2560%2Cc_limit/lilo_and_stitch_ver2_xxlg.jpg"
+                                alt="Stitch"></div><span>Stitch</span>
+                    </a>
+                    <a href="#" class="thematic-item">
+                        <div class="thematic-image-wrapper"><img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIUuyArs91CVXbP_SXQYylwIhaOXej6XNx1g&s"
+                                alt="Hello Kitty"></div><span>Hello Kitty</span>
+                    </a>
+                    <a href="#" class="thematic-item">
+                        <div class="thematic-image-wrapper"><img
+                                src="https://lumiere-a.akamaihd.net/v1/images/au_shop_disney_po_card_m_b2c9fa25.jpeg?region=0,0,1024,640&width=768"
+                                alt="Disney"></div><span>Disney</span>
+                    </a>
+                    <a href="#" class="thematic-item">
+                        <div class="thematic-image-wrapper"><img
+                                src="https://andro4all.com/hero/2024/02/harry-potter.1708702569.2268.jpg?width=768&aspect_ratio=16:9&format=nowebp"
+                                alt="Harry Potter"></div><span>Harry Potter</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"¡Increíble! Encontré todo para la lista de útiles de mi hijo en un
+                        solo lugar. El envío a Arequipa fue súper rápido. ¡Totalmente recomendados!"</p>
+                    <div class="testimonial-author"><span class="author-name">- Maria Fernanda L.</span>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="instagram-section container">
+            <h2 class="section-title">Síguenos en Instagram</h2>
+            <p class="instagram-handle">@koky.tienda</p>
+            <div class="instagram-grid">
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Ver post en Instagram"><img src=""
+                        alt="Nuevos productos de papelería en flat lay"></a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Ver post en Instagram"><img src=""
+                        alt="Escritorio de estudio organizado con apuntes y marcadores"></a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Ver post en Instagram"><img src=""
+                        alt="Mochila en oferta con fondo de color"></a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Ver post en Instagram"><img src=""
+                        alt="Preparando un pedido con mucho cariño"></a>
+            </div>
+            <a href="https://www.instagram.com/" class="btn btn-primary instagram-follow-btn" target="_blank">Ver más en
+                Instagram</a>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-column">
+                <h4>KOKY</h4>
+                <p>Tu tienda de librería, arte y regalería favorita.</p>
+                <div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i
+                            class="fab fa-tiktok"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+            </div>
+            <div class="footer-column">
+                <h4>Links Útiles</h4>
+                <ul>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Política de Devolución</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Mi Cuenta</h4>
+                <ul>
+                    <li><a href="#">Ingresar</a></li>
+                    <li><a href="#">Mis Pedidos</a></li>
+                    <li><a href="#">Seguimiento de Envío</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Medios de pago</h4><img src="https://placehold.co/200x40/EFEFEF/333?text=Medios+de+Pago"
+                    alt="Medios de pago" class="payment-methods">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 KOKY. Con orgullo desde Huancayo, Perú.</p>
+            <p style="margin-top: 10px;">
+                <a href="reclamaciones.html" style="color: #fff; text-decoration: underline;">
+                    <i class="fa-solid fa-book"></i> Libro de Reclamaciones
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/51999999999?text=Hola!%20Tengo%20una%20consulta%20desde%20la%20web%20de%20KOKY"
+        class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Modal de Login/Registro/Recuperación -->
+    <div class="modal-overlay" id="auth-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+
+            <!-- VISTA LOGIN -->
+            <div id="login-view">
+                <div class="modal-header">
+                    <h2>Inicia sesión para comprar</h2>
+                    <p>Usa tu cuenta para ingresar a la tienda KOKY.</p>
+                </div>
+                <form class="login-form" id="login-form">
+                    <div class="form-group"><label for="login-email">Correo electrónico</label><input type="email"
+                            id="login-email" placeholder="Ingresa tu correo electrónico" required></div>
+                    <div class="form-group"><label for="login-password">Contraseña</label><input type="password"
+                            id="login-password" placeholder="Ingresa tu contraseña" required></div>
+                    <!-- LINK DE OLVIDÉ CONTRASEÑA -->
+                    <a href="#" class="forgot-password" id="btn-forgot-pass">¿Olvidaste tu contraseña?</a>
+                    <button type="submit" class="btn btn-primary btn-full-width">Ingresar</button>
+                </form>
+                <div class="modal-footer"><span>¿Aún no tienes cuenta? <a href="#"
+                            id="show-register-view">Regístrate</a></span></div>
+            </div>
+
+            <!-- VISTA REGISTRO -->
+            <div id="register-view" style="display: none;">
+                <div class="modal-header">
+                    <h2>Crea tu cuenta</h2>
+                    <p>Es rápido y fácil.</p>
+                </div>
+                <form class="register-form" id="register-form">
+                    <div class="form-group"><label for="register-name">Nombre</label><input type="text"
+                            id="register-name" placeholder="Ingresa tu nombre" required></div>
+                    <div class="form-group"><label for="register-email">Correo electrónico</label><input type="email"
+                            id="register-email" placeholder="Ingresa tu correo electrónico" required></div>
+                    <div class="form-group"><label for="register-password">Contraseña</label><input type="password"
+                            id="register-password" placeholder="Crea una contraseña" required></div><button
+                        type="submit" class="btn btn-primary btn-full-width">Crear cuenta</button>
+                </form>
+                <div class="modal-footer"><span>¿Ya tienes una cuenta? <a href="#" id="show-login-view">Inicia
+                            sesión</a></span></div>
+            </div>
+
+            <!-- VISTA RECUPERAR CONTRASEÑA (NUEVO) -->
+            <div id="forgot-view" style="display: none;">
+                <div class="modal-header">
+                    <h2>Recuperar Contraseña</h2>
+                    <p>Ingresa tu correo para recibir un enlace de restablecimiento.</p>
+                </div>
+                <form class="login-form" id="forgot-form">
+                    <div class="form-group">
+                        <label for="forgot-email">Correo electrónico</label>
+                        <input type="email" id="forgot-email" placeholder="ejemplo@email.com" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full-width">Enviar enlace</button>
+                </form>
+                <div class="modal-footer">
+                    <span><a href="#" id="back-to-login">Volver al inicio de sesión</a></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal de Producto Agregado -->
+    <div class="modal-overlay" id="add-to-cart-modal">
+        <div class="modal-content add-to-cart-modal-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+            <div class="modal-body">
+                <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+                <div class="product-info">
+                    <h3>Producto agregado a tu Carro</h3>
+                    <div class="product-details">
+                        <img id="modal-product-image" src="" alt="Producto">
+                        <div>
+                            <p id="modal-product-name"></p>
+                            <b id="modal-product-price"></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-tertiary" id="continue-shopping-btn">Seguir comprando</button>
+                <a href="carrito.html" class="btn btn-secondary">Ir al Carro</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS EN ORDEN -->
+    <script src="js olds/script.js" defer></script>
+    <script src="js/loader.js" defer></script>
+    <script src="js olds/carrito.js" defer></script>
+    <script src="js/wishlist-logic.js" defer></script>
+</body>
+
+</html>

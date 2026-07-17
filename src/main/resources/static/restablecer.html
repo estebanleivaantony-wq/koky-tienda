@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restablecer Contraseña - KOKY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            display: flex; justify-content: center; align-items: center;
+            height: 100vh; background-color: #f4f7f6;
+        }
+        .reset-card {
+            background: white; padding: 40px; border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1); width: 100%; max-width: 400px;
+            text-align: center;
+        }
+        .reset-card h2 { color: #333; margin-bottom: 10px; }
+        .reset-card p { color: #666; margin-bottom: 20px; font-size: 0.9rem; }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        label { display: block; margin-bottom: 5px; font-weight: 600; color: #555; }
+        input { 
+            width: 100%; padding: 12px; border: 1px solid #ddd; 
+            border-radius: 8px; outline: none; transition: 0.3s; 
+        }
+        input:focus { border-color: #FE4A49; }
+        .btn-full-width { width: 100%; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="reset-card">
+        <h2>Nueva Contraseña</h2>
+        <p>Por favor, ingresa tu nueva contraseña.</p>
+        <form id="reset-form">
+            <div class="form-group">
+                <label for="new-password">Nueva Contraseña</label>
+                <input type="password" id="new-password" placeholder="Mínimo 6 caracteres" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full-width">Cambiar Contraseña</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('reset-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Obtener el token de la URL (?token=...)
+            const params = new URLSearchParams(window.location.search);
+            const token = params.get('token');
+            const newPassword = document.getElementById('new-password').value;
+
+            if(!token) {
+                alert("Enlace inválido o incompleto.");
+                return;
+            }
+
+            try {
+                const res = await fetch('http://72.61.9.249:9000/api/auth/reset-password', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ token, newPassword })
+                });
+                
+                const data = await res.json();
+
+                if(res.ok) {
+                    alert(data.message);
+                    window.location.href = 'index.html'; // Redirigir al inicio para loguearse
+                } else {
+                    alert(data.error || "No se pudo cambiar la contraseña.");
+                }
+            } catch(err) {
+                console.error(err);
+                alert("Error de conexión.");
+            }
+        });
+    </script>
+</body>
+</html>

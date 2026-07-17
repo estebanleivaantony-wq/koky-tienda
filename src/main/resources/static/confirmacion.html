@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Compra - KOKY</title>
+
+    <!-- Enlaces a los mismos estilos y fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- ===== IMPORTANTE: LIBRERÍAS JS-PDF PARA GENERAR PDFS ===== -->
+    <!-- jsPDF core library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- jsPDF-AutoTable plugin (ESTA ES LA LÍNEA CRUCIAL PARA LAS TABLAS EN EL PDF) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.0/jspdf.plugin.autotable.min.js"></script>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <span><i class="fa-solid fa-bolt"></i> 3 cuotas sin interés</span>
+            <span><i class="fa-solid fa-truck"></i> Envíos a todo el Perú</span>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">KOKY</a>
+            <form class="search-bar" id="search-form">
+                <input type="search" id="search-input" placeholder="Buscar productos, marcas y más...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div class="user-actions">
+                <div class="user-menu" id="user-menu-logged-out">
+                    <div class="user-menu-trigger"><span>Hola, <br><b>Inicia sesión</b></span><i
+                            class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="user-dropdown">
+                        <li><a href="#" class="open-login-modal">Inicia sesión</a></li>
+                        <li><a href="#" class="open-register-modal">Regístrate</a></li>
+                        <li><a href="perfil.html">Mi cuenta</a></li>
+                    </ul>
+                </div>
+                <div class="user-menu" id="user-menu-logged-in" style="display: none;">
+                    <div class="user-menu-trigger"><span id="welcome-message"></span><i
+                            class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="user-dropdown">
+                        <li><a href="perfil.html">Mi cuenta</a></li>
+                        <li><a href="mis-puntos.html">Mis Puntos</a></li>
+                        <li><a href="mis-compras.html">Mis Compras</a></li>
+                        <li><a href="#" id="logout-btn">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+                <a href="carrito.html" aria-label="Carrito de compras" class="cart-icon"><i
+                        class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">¡NOVEDADES!</a></li>
+                <li><a href="tendencias.html">PRODUCTOS EN TENDENCIA</a></li>
+                <li><a href="escolar.html">ESCOLAR</a></li>
+                <li><a href="oficina.html">OFICINA</a></li>
+                <li><a href="regaleria.html">REGALERÍA</a></li>
+                <li><a href="marcas.html">MARCAS & TEMÁTICAS</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="confirmation-page-main">
+        <div class="container">
+            <div class="confirmation-card">
+                <i class="fa-solid fa-circle-check success-icon"></i>
+                <h2>¡Gracias por tu compra!</h2>
+                <p>Tu orden ha sido procesada con éxito. Recibirás un correo electrónico con los detalles de tu compra.
+                </p>
+                <div class="order-details-summary">
+                    <h3>Detalles de tu Orden <span id="order-id-display"></span></h3>
+                    <p>Fecha: <span id="order-date-display"></span></p>
+                    <p>Total: <span id="order-total-display"></span></p>
+
+                    <h4>Productos comprados:</h4>
+                    <ul id="order-items-list">
+                        <!-- Los productos se cargarán aquí con JS -->
+                    </ul>
+
+                    <h4>Información de Facturación:</h4>
+                    <p>Cliente: <span id="billing-name-display"></span> <span id="billing-lastname-display"></span></p>
+                    <p>Email: <span id="billing-email-display"></span></p>
+                    <p>Dirección: <span id="billing-address-display"></span></p>
+                    <p>Documento: <span id="document-type-display"></span>: <span id="document-id-display"></span></p>
+                    <p id="document-razon-social-display" style="display:none;"></p>
+                </div>
+
+                <div class="confirmation-actions">
+                    <a href="index.html" class="btn btn-primary">Volver a la Tienda</a>
+                    <button id="download-document-btn" class="btn btn-secondary">
+                        <i class="fa-solid fa-download"></i> Descargar <span id="download-document-type">Boleta</span>
+                    </button>
+                    <a href="mis-compras.html" class="btn btn-tertiary">Ver Mis Compras</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-column">
+                <h4>KOKY</h4>
+                <p>Tu tienda de librería, arte y regalería favorita.</p>
+                <div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i
+                            class="fab fa-tiktok"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+            </div>
+            <div class="footer-column">
+                <h4>Links Útiles</h4>
+                <ul>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Política de Devolución</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Mi Cuenta</h4>
+                <ul>
+                    <li><a href="#">Ingresar</a></li>
+                    <li><a href="#">Mis Pedidos</a></li>
+                    <li><a href="#">Seguimiento de Envío</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Medios de pago</h4><img src="https://placehold.co/200x40/EFEFEF/333?text=Medios+de+Pago"
+                    alt="Medios de pago" class="payment-methods">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 KOKY. Con orgullo desde Huancayo, Perú.</p>
+            <p style="margin-top: 10px;">
+                <a href="reclamaciones.html" style="color: #fff; text-decoration: underline;">
+                    <i class="fa-solid fa-book"></i> Libro de Reclamaciones
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modal de Login/Registro (copiado de tu index.html) -->
+    <div class="modal-overlay" id="auth-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+            <div id="login-view">
+                <div class="modal-header">
+                    <h2>Inicia sesión para comprar</h2>
+                    <p>Usa tu cuenta para ingresar a la tienda KOKY.</p>
+                </div>
+                <form class="login-form" id="login-form">
+                    <div class="form-group"><label for="login-email">Correo electrónico</label><input type="email"
+                            id="login-email" placeholder="Ingresa tu correo electrónico" required></div>
+                    <div class="form-group"><label for="login-password">Contraseña</label><input type="password"
+                            id="login-password" placeholder="Ingresa tu contraseña" required></div><a href="#"
+                        class="forgot-password">¿Olvidaste tu contraseña?</a><button type="submit"
+                        class="btn btn-primary btn-full-width">Ingresar</button>
+                </form>
+                <div class="modal-footer"><span>¿Aún no tienes cuenta? <a href="#"
+                            id="show-register-view">Regístrate</a></span></div>
+            </div>
+            <div id="register-view" style="display: none;">
+                <div class="modal-header">
+                    <h2>Crea tu cuenta</h2>
+                    <p>Es rápido y fácil.</p>
+                </div>
+                <form class="register-form" id="register-form">
+                    <div class="form-group"><label for="register-name">Nombre</label><input type="text"
+                            id="register-name" placeholder="Ingresa tu nombre" required></div>
+                    <div class="form-group"><label for="register-email">Correo electrónico</label><input type="email"
+                            id="register-email" placeholder="Ingresa tu correo electrónico" required></div>
+                    <div class="form-group"><label for="register-password">Contraseña</label><input type="password"
+                            id="register-password" placeholder="Crea una contraseña" required></div><button
+                        type="submit" class="btn btn-primary btn-full-width">Crear cuenta</button>
+                </form>
+                <div class="modal-footer"><span>¿Ya tienes una cuenta? <a href="#" id="show-login-view">Inicia
+                            sesión</a></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Producto Agregado (copiado de tu index.html) -->
+    <div class="modal-overlay" id="add-to-cart-modal">
+        <div class="modal-content add-to-cart-modal-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+            <div class="modal-body">
+                <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+                <div class="product-info">
+                    <h3>Producto agregado a tu Carro</h3>
+                    <div class="product-details">
+                        <img id="modal-product-image" src="" alt="Producto">
+                        <div>
+                            <p id="modal-product-name"></p>
+                            <b id="modal-product-price"></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-tertiary" id="continue-shopping-btn">Seguir comprando</button>
+                <a href="carrito.html" class="btn btn-secondary">Ir al Carro</a>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/51999999999?text=Hola!%20Tengo%20una%20consulta%20desde%20la%20web%20de%20KOKY"
+        class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <!-- El orden de tus scripts es importante. script.js suele manejar la lógica general del sitio, incluyendo modales de auth. -->
+    <script src="js olds/script.js" defer></script>
+    <!-- Si carrito.js tiene lógica específica del modal de "añadir al carrito" que quieres en confirmacion.html, déjalo. -->
+    <script src="js olds/carrito.js" defer></script>
+    <script src="js olds/confirmacion.js" defer></script>
+</body>
+
+</html>

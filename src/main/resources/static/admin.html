@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Administración - Koky</title>
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: #f5f6fa;
+    }
+
+    h1 {
+        margin-bottom: 15px;
+        font-weight: 700;
+        color: #2c3e50;
+    }
+
+    button {
+        background: #e74c3c;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    button:hover {
+        background: #c0392b;
+    }
+
+    .card {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 25px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+
+    .card h2 {
+        display: flex;
+        align-items: center;
+        font-size: 22px;
+        color: #34495e;
+        margin-bottom: 15px;
+    }
+
+    .card h2::before {
+        content: "📊";
+        margin-right: 10px;
+        font-size: 24px;
+    }
+
+    .orders-title::before {
+        content: "📄";
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+    th {
+        background: #f0f2f5;
+        padding: 12px;
+        font-size: 15px;
+        border-bottom: 2px solid #dfe0e5;
+        color: #2c3e50;
+        text-align: left;
+    }
+
+    td {
+        padding: 12px;
+        border-bottom: 1px solid #ebecee;
+        font-size: 14.5px;
+        color: #444;
+    }
+
+    tr:hover {
+        background: #f9f9f9;
+    }
+
+    .status-PENDING {
+        color: #e67e22;
+        font-weight: bold;
+    }
+
+    .status-COMPLETED {
+        color: #27ae60;
+        font-weight: bold;
+    }
+
+    .status-CANCELED {
+        color: #c0392b;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Panel de Administración</h1>
+<button onclick="logout()">Cerrar sesión</button>
+
+<div class="card">
+    <h2>📊 Estado del Sistema</h2>
+    <p><strong>Sistema:</strong> <span id="sys-status">Cargando...</span></p>
+    <p><strong>Base de datos:</strong> <span id="db-status">Cargando...</span></p>
+    <p><strong>Ventas Hoy:</strong> <span id="sales-today">--</span></p>
+    <p><strong>Órdenes Hoy:</strong> <span id="orders-count">--</span></p>
+    <p><strong>Usuarios Totales:</strong> <span id="total-users">--</span></p>
+</div>
+
+<div class="card">
+    <h2>🧾 Órdenes del Sistema</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Comprobante</th>
+                <th>Monto Total</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+                <th>Método de Pago</th>
+            </tr>
+        </thead>
+        <tbody id="orders-table-body">
+            <tr><td colspan="5">Cargando órdenes...</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    // BACKEND REAL DEL VPS
+    const API_URL = 'http://72.61.9.249:9000/api/admin';
+
+    function logout() {
+        localStorage.removeItem('currentUser');
+        window.location.href = 'index.html';
+    }
+
+    async function fetchRealData() {
+        try {
+            const statsRes = await fetch(`${API_URL}/stats`);
+            if(statsRes.ok) {
+                const stats = await statsRes.json();
+                document.getElementById('sys-status').innerText = stats.estadoSistema;
+                document.getElementById('db-status').innerText = stats.estadoBaseDatos;
+                document.getElementById('sales-today').innerText = `S/ ${stats.ventasHoy.toFixed(2)}`;
+                document.getElementById('orders-count').innerText = `${stats.ordenesHoy} órdenes hoy`;
+                document.getElementById('total-users').innerText = stats.usuariosTotales;
+            }
+
+            const ordersRes = await fetch(`${API_URL}/orders`);
+            if(ordersRes.ok) {
+                const orders = await ordersRes.json();
+                const tbody = document.getElementById('orders-table-body');
+                tbody.innerHTML = '';
+
+                if(orders.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="5">No hay órdenes en la base de datos.</td></tr>';
+                } else {
+                    orders.forEach(o => {
+                        const date = new Date(o.orderDate).toLocaleDateString();
+                        tbody.innerHTML += `
+                            <tr>
+                                <td><strong>${o.receiptNumber}</strong></td>
+                                <td>S/ ${o.totalAmount.toFixed(2)}</td>
+                                <td>${date}</td>
+                                <td><span class="status-${o.status}">${o.status}</span></td>
+                                <td>${o.paymentMethod}</td>
+                            </tr>
+                        `;
+                    });
+                }
+            }
+        } catch (error) {
+            console.error("Error conectando al backend:", error);
+            alert("No se pudo conectar al Backend.");
+        }
+    }
+
+    fetchRealData();
+</script>
+
+</body>
+</html>

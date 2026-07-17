@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoría Escolar - KOKY</title>
+
+    <!-- Enlaces a los mismos estilos y fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <span><i class="fa-solid fa-bolt"></i> 3 cuotas sin interés</span>
+            <span><i class="fa-solid fa-truck"></i> Envíos a todo el Perú</span>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">KOKY</a>
+            <form class="search-bar" id="search-form">
+                <input type="search" id="search-input" placeholder="Buscar productos, marcas y más...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div class="user-menu" id="user-menu-logged-out">
+                <div class="user-menu-trigger"><span>Hola, <br><b>Inicia sesión</b></span><i
+                        class="fa-solid fa-chevron-down"></i></div>
+                <ul class="user-dropdown">
+                    <li><a href="#" class="open-login-modal">Inicia sesión</a></li>
+                    <li><a href="#" class="open-register-modal">Regístrate</a></li>
+                    <li><a href="perfil.html">Mi cuenta</a></li>
+                </ul>
+            </div>
+            <div class="user-menu" id="user-menu-logged-in" style="display: none;">
+                <div class="user-menu-trigger"><span id="welcome-message"></span><i
+                        class="fa-solid fa-chevron-down"></i></div>
+                <ul class="user-dropdown">
+                    <li><a href="perfil.html">Mi cuenta</a></li>
+                    <li><a href="mis-puntos.html">Mis Puntos</a></li>
+                    <li><a href="mis-compras.html">Mis Compras</a></li>
+                    <li><a href="#" id="logout-btn">Cerrar sesión</a></li>
+                </ul>
+            </div>
+            <a href="carrito.html" aria-label="Carrito de compras" class="cart-icon"><i
+                    class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">¡NOVEDADES!</a></li>
+                <li><a href="tendencias.html">PRODUCTOS EN TENDENCIA</a></li>
+                <li><a href="escolar.html" class="active">ESCOLAR</a></li>
+                <li><a href="oficina.html">OFICINA</a></li>
+                <li><a href="regaleria.html">REGALERÍA</a></li>
+                <li><a href="marcas.html">MARCAS & TEMÁTICAS</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container" style="padding-top: 60px; padding-bottom: 60px;">
+            <h2 class="section-title">Categoría Escolar: Útiles y Mochilas</h2>
+
+            <div class="product-grid">
+                <!-- 30 productos escolares -->
+                <div class="product-card" data-id="201" data-name="Mochila Porta 15.6''" data-price="99.90"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+1"><img src="img/MochilaPorta.webp"
+                        alt="Mochila Escolar">
+                    <h3>Mochila Porta 15.6''</h3>
+                    <div class="price"><span class="current-price">S/ 99.90</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="202" data-name="Caja de Colores x24 Faber-Castell" data-price="18.50"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+2"><img src="img/cajaColores.webp"
+                        alt="Caja de Colores">
+                    <h3>Caja de Colores x24</h3>
+                    <div class="price"><span class="current-price">S/ 18.50</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="203" data-name="Cuaderno Cuadriculado Standford" data-price="7.90"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+3"><img
+                        src="img/CuadernoCuadriculado.jpg" alt="Cuaderno Cuadriculado">
+                    <h3>Cuaderno Cuadriculado</h3>
+                    <div class="price"><span class="current-price">S/ 7.90</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="204" data-name="Lonchera Térmica Infantil" data-price="45.00"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+4"><img
+                        src="img/LoncheraTermica.webp" alt="Lonchera Térmica">
+                    <h3>Lonchera Térmica Infantil</h3>
+                    <div class="price"><span class="current-price">S/ 45.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="205" data-name="Set de Geometría Acrílico" data-price="12.00"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+5"><img src="img/setGeometria.webp"
+                        alt="Set de Geometría">
+                    <h3>Set de Geometría Acrílico</h3>
+                    <div class="price"><span class="current-price">S/ 12.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="206" data-name="Tijera Escolar Punta Roma" data-price="4.50"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+6"><img
+                        src="img/tijeraPuntaRoma.webp" alt="Tijera Escolar">
+                    <h3>Tijera Escolar Punta Roma</h3>
+                    <div class="price"><span class="current-price">S/ 4.50</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="207" data-name="Goma en Barra UHU 40g" data-price="6.00"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+7"><img src="img/gomaBarra.webp"
+                        alt="Goma en Barra">
+                    <h3>Goma en Barra UHU 40g</h3>
+                    <div class="price"><span class="current-price">S/ 6.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="208" data-name="Plumones Delgados x12 Artesco" data-price="15.90"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+8"><img
+                        src="img/plumonesDelgados.webp" alt="Plumones Delgados">
+                    <h3>Plumones Delgados x12</h3>
+                    <div class="price"><span class="current-price">S/ 15.90</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="209" data-name="Cartuchera de Lona 2 Cierres" data-price="25.00"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+9"><img
+                        src="img/cartuchera2cierres.webp" alt="Cartuchera de Lona">
+                    <h3>Cartuchera 2 Cierres</h3>
+                    <div class="price"><span class="current-price">S/ 25.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="210" data-name="Block de Dibujo A4 Skecth" data-price="9.50"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+10"><img
+                        src="img/blockDIBUJOa4.jpg" alt="Block de Dibujo">
+                    <h3>Block de Dibujo A4</h3>
+                    <div class="price"><span class="current-price">S/ 9.50</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="211" data-name="Forro de Cuaderno Adhesivo" data-price="5.00"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+11"><img src="img/forroAdesivo.png"
+                        alt="Forro de Cuaderno">
+                    <h3>Forro Adhesivo x Metro</h3>
+                    <div class="price"><span class="current-price">S/ 5.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="212" data-name="Temperas Artesco x12" data-price="14.90"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+12"><img
+                        src="img/temperasArtesco.webp" alt="Temperas Artesco">
+                    <h3>Temperas Artesco x12</h3>
+                    <div class="price"><span class="current-price">S/ 14.90</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="213" data-name="Lápiz Bicolor Standford" data-price="2.50"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+13"><img
+                        src="img/lapizBicolor.webp" alt="Lápiz Bicolor">
+                    <h3>Lápiz Bicolor Standford</h3>
+                    <div class="price"><span class="current-price">S/ 2.50</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="214" data-name="Borrador Blanco Faber-Castell" data-price="1.50"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+14"><img
+                        src="img/borradorBLanco.webp" alt="Borrador Blanco">
+                    <h3>Borrador Blanco Faber</h3>
+                    <div class="price"><span class="current-price">S/ 1.50</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="215" data-name="Tajador con Depósito" data-price="3.00"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+15"><img
+                        src="img/tajadorDeposito.webp" alt="Tajador con Depósito">
+                    <h3>Tajador con Depósito</h3>
+                    <div class="price"><span class="current-price">S/ 3.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="216" data-name="Corrector Líquido Faber" data-price="4.00"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+16"><img
+                        src="img/correctorLiquido.webp" alt="Corrector Líquido">
+                    <h3>Corrector Líquido Faber</h3>
+                    <div class="price"><span class="current-price">S/ 4.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="217" data-name="Papel Lustre x Pliego" data-price="1.00"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+17"><img src="img/papelLustre.webp"
+                        alt="Papel Lustre">
+                    <h3>Papel Lustre x Pliego</h3>
+                    <div class="price"><span class="current-price">S/ 1.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="218" data-name="Plastilina Artesco x12" data-price="8.50"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+18"><img
+                        src="img/plastilinaArtesco.webp" alt="Plastilina Artesco">
+                    <h3>Plastilina Artesco x12</h3>
+                    <div class="price"><span class="current-price">S/ 8.50</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="219" data-name="Resaltadores Pastel Faber" data-price="22.00"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+19"><img
+                        src="img/resaltadoresPastel.webp" alt="Resaltadores Pastel">
+                    <h3>Resaltadores Pastel x4</h3>
+                    <div class="price"><span class="current-price">S/ 22.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="220" data-name="Folder Manila A4" data-price="0.80"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+20"><img src="img/folderManila.jpg"
+                        alt="Folder Manila">
+                    <h3>Folder Manila A4</h3>
+                    <div class="price"><span class="current-price">S/ 0.80</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="221" data-name="Calculadora Científica Casio" data-price="55.00"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+21"><img
+                        src="img/calculadoraCientifica.jpg" alt="Calculadora Científica">
+                    <h3>Calculadora Científica</h3>
+                    <div class="price"><span class="current-price">S/ 55.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="222" data-name="Cinta Adhesiva Gruesa" data-price="3.50"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+22"><img
+                        src="img/cintaAdhesivagruesa.webp" alt="Cinta Adhesiva">
+                    <h3>Cinta Adhesiva Gruesa</h3>
+                    <div class="price"><span class="current-price">S/ 3.50</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="223" data-name="Papel Bond A4 500 Hojas" data-price="19.90"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+23"><img
+                        src="img/papelBond500hojas.webp" alt="Papel Bond">
+                    <h3>Papel Bond A4 (500 Hojas)</h3>
+                    <div class="price"><span class="current-price">S/ 19.90</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="224" data-name="Juego de Pinceles" data-price="11.00"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+24"><img
+                        src="img/juegoPincelesx5.webp" alt="Juego de Pinceles">
+                    <h3>Juego de Pinceles x5</h3>
+                    <div class="price"><span class="current-price">S/ 11.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="225" data-name="Block de Cartulina de Colores" data-price="12.50"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+25"><img
+                        src="img/BlockDeCartulina.webp" alt="Block de Cartulina">
+                    <h3>Block de Cartulina</h3>
+                    <div class="price"><span class="current-price">S/ 12.50</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="226" data-name="Silicona Líquida 100ml" data-price="5.50"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+26"><img
+                        src="img/siliconaLiquida.webp" alt="Silicona Líquida">
+                    <h3>Silicona Líquida 100ml</h3>
+                    <div class="price"><span class="current-price">S/ 5.50</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="227" data-name="Crayolas Jumbo x12" data-price="9.90"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+27"><img
+                        src="img/crayolas jumbo x12.webp" alt="Crayolas Jumbo">
+                    <h3>Crayolas Jumbo x12</h3>
+                    <div class="price"><span class="current-price">S/ 9.90</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="228" data-name="Compás de Precisión" data-price="8.00"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+28"><img
+                        src="img/compas de precision.webp" alt="Compás de Precisión">
+                    <h3>Compás de Precisión</h3>
+                    <div class="price"><span class="current-price">S/ 8.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="229" data-name="Diccionario Escolar" data-price="25.00"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+29"><img
+                        src="img/diccionarioEscoalr.webp" alt="Diccionario Escolar">
+                    <h3>Diccionario Escolar</h3>
+                    <div class="price"><span class="current-price">S/ 25.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="230" data-name="Mochila con Ruedas" data-price="150.00"
+                    data-image="https://placehold.co/300x300/f8d7da/333?text=Escolar+30"><img
+                        src="img/mochilaRuedas.webp" alt="Mochila con Ruedas">
+                    <h3>Mochila con Ruedas</h3>
+                    <div class="price"><span class="current-price">S/ 150.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-column">
+                <h4>KOKY</h4>
+                <p>Tu tienda de librería, arte y regalería favorita.</p>
+                <div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i
+                            class="fab fa-tiktok"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+            </div>
+            <div class="footer-column">
+                <h4>Links Útiles</h4>
+                <ul>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Política de Devolución</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Mi Cuenta</h4>
+                <ul>
+                    <li><a href="#">Ingresar</a></li>
+                    <li><a href="#">Mis Pedidos</a></li>
+                    <li><a href="#">Seguimiento de Envío</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Medios de pago</h4><img src="https://placehold.co/200x40/EFEFEF/333?text=Medios+de+Pago"
+                    alt="Medios de pago" class="payment-methods">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 KOKY. Con orgullo desde Huancayo, Perú.</p>
+            <p style="margin-top: 10px;">
+                <a href="reclamaciones.html" style="color: #fff; text-decoration: underline;">
+                    <i class="fa-solid fa-book"></i> Libro de Reclamaciones
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modales -->
+    <div class="modal-overlay" id="auth-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+            <div id="login-view">
+                <div class="modal-header">
+                    <h2>Inicia sesión para comprar</h2>
+                    <p>Usa tu cuenta para ingresar a la tienda KOKY.</p>
+                </div>
+                <form class="login-form" id="login-form">
+                    <div class="form-group"><label for="login-email">Correo electrónico</label><input type="email"
+                            id="login-email" placeholder="Ingresa tu correo electrónico" required></div>
+                    <div class="form-group"><label for="login-password">Contraseña</label><input type="password"
+                            id="login-password" placeholder="Ingresa tu contraseña" required></div><a href="#"
+                        class="forgot-password">¿Olvidaste tu contraseña?</a><button type="submit"
+                        class="btn btn-primary btn-full-width">Ingresar</button>
+                </form>
+                <div class="modal-footer"><span>¿Aún no tienes cuenta? <a href="#"
+                            id="show-register-view">Regístrate</a></span></div>
+            </div>
+            <div id="register-view" style="display: none;">
+                <div class="modal-header">
+                    <h2>Crea tu cuenta</h2>
+                    <p>Es rápido y fácil.</p>
+                </div>
+                <form class="register-form" id="register-form">
+                    <div class="form-group"><label for="register-name">Nombre</label><input type="text"
+                            id="register-name" placeholder="Ingresa tu nombre" required></div>
+                    <div class="form-group"><label for="register-email">Correo electrónico</label><input type="email"
+                            id="register-email" placeholder="Ingresa tu correo electrónico" required></div>
+                    <div class="form-group"><label for="register-password">Contraseña</label><input type="password"
+                            id="register-password" placeholder="Crea una contraseña" required></div><button
+                        type="submit" class="btn btn-primary btn-full-width">Crear cuenta</button>
+                </form>
+                <div class="modal-footer"><span>¿Ya tienes una cuenta? <a href="#" id="show-login-view">Inicia
+                            sesión</a></span></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="add-to-cart-modal">
+        <div class="modal-content add-to-cart-modal-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+            <div class="modal-body">
+                <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+                <div class="product-info">
+                    <h3>Producto agregado a tu Carro</h3>
+                    <div class="product-details"><img id="modal-product-image" src="" alt="Producto">
+                        <div>
+                            <p id="modal-product-name"></p><b id="modal-product-price"></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions"><button class="btn btn-tertiary" id="continue-shopping-btn">Seguir
+                    comprando</button><a href="carrito.html" class="btn btn-secondary">Ir al Carro</a></div>
+        </div>
+    </div>
+    <a href="https://wa.me/51999999999?text=Hola!%20Tengo%20una%20consulta%20desde%20la%20web%20de%20KOKY"
+        class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Scripts -->
+    <script src="js olds/script.js" defer></script>
+    <script src="js/loader.js" defer></script>
+    <script src="js olds/carrito.js" defer></script>
+    <script src="js/wishlist-logic.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoría Regalería - KOKY</title>
+
+    <!-- Enlaces a los mismos estilos y fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <span><i class="fa-solid fa-bolt"></i> 3 cuotas sin interés</span>
+            <span><i class="fa-solid fa-truck"></i> Envíos a todo el Perú</span>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">KOKY</a>
+            <form class="search-bar" id="search-form">
+                <input type="search" id="search-input" placeholder="Buscar productos, marcas y más...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div class="user-menu" id="user-menu-logged-out">
+                <div class="user-menu-trigger"><span>Hola, <br><b>Inicia sesión</b></span><i
+                        class="fa-solid fa-chevron-down"></i></div>
+                <ul class="user-dropdown">
+                    <li><a href="#" class="open-login-modal">Inicia sesión</a></li>
+                    <li><a href="#" class="open-register-modal">Regístrate</a></li>
+                    <li><a href="perfil.html">Mi cuenta</a></li>
+                </ul>
+            </div>
+            <div class="user-menu" id="user-menu-logged-in" style="display: none;">
+                <div class="user-menu-trigger"><span id="welcome-message"></span><i
+                        class="fa-solid fa-chevron-down"></i></div>
+                <ul class="user-dropdown">
+                    <li><a href="perfil.html">Mi cuenta</a></li>
+                    <li><a href="mis-puntos.html">Mis Puntos</a></li>
+                    <li><a href="mis-compras.html">Mis Compras</a></li>
+                    <li><a href="#" id="logout-btn">Cerrar sesión</a></li>
+                </ul>
+            </div>
+            <a href="carrito.html" aria-label="Carrito de compras" class="cart-icon"><i
+                    class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">¡NOVEDADES!</a></li>
+                <li><a href="tendencias.html">PRODUCTOS EN TENDENCIA</a></li>
+                <li><a href="escolar.html">ESCOLAR</a></li>
+                <li><a href="oficina.html">OFICINA</a></li>
+                <li><a href="regaleria.html" class="active">REGALERÍA</a></li>
+                <li><a href="marcas.html">MARCAS & TEMÁTICAS</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container" style="padding-top: 60px; padding-bottom: 60px;">
+            <h2 class="section-title">Categoría Regalería: Detalles que Encantan</h2>
+
+            <div class="product-grid">
+                <!-- 30 productos de regalería -->
+                <div class="product-card" data-id="401" data-name="Taza Personalizada con Foto" data-price="35.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+1"><img
+                        src="img/tazaPersonalizada.webp" alt="Taza Personalizada">
+                    <h3>Taza Personalizada</h3>
+                    <div class="price"><span class="current-price">S/ 35.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="402" data-name="Funko Pop! Grogu (The Mandalorian)"
+                    data-price="75.00" data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+2"><img
+                        src="img/funkoPopGrogu.png" alt="Funko Pop Grogu">
+                    <h3>Funko Pop! Grogu</h3>
+                    <div class="price"><span class="current-price">S/ 75.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="403" data-name="Puzzle 1000 Piezas Paisaje" data-price="65.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+3"><img
+                        src="img/puzzle100piezas.webp" alt="Puzzle 1000 Piezas">
+                    <h3>Puzzle 1000 Piezas</h3>
+                    <div class="price"><span class="current-price">S/ 65.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="404" data-name="Vela Aromática de Vainilla" data-price="29.90"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+4"><img
+                        src="img/vela aromatica.webp" alt="Vela Aromática">
+                    <h3>Vela Aromática</h3>
+                    <div class="price"><span class="current-price">S/ 29.90</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="405" data-name="Marco de Fotos de Madera" data-price="25.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+5"><img
+                        src="img/marcoFotos Madera.webp" alt="Marco de Fotos">
+                    <h3>Marco de Fotos Madera</h3>
+                    <div class="price"><span class="current-price">S/ 25.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="406" data-name="Caja de Regalo Premium" data-price="15.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+6"><img
+                        src="img/cajaRegaloPremium.webp" alt="Caja de Regalo">
+                    <h3>Caja de Regalo Premium</h3>
+                    <div class="price"><span class="current-price">S/ 15.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="407" data-name="Juego de Mesa Catan" data-price="180.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+7"><img
+                        src="img/juego de mesa CATAN.webp" alt="Juego de Mesa Catan">
+                    <h3>Juego de Mesa Catan</h3>
+                    <div class="price"><span class="current-price">S/ 180.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="408" data-name="Peluche de Aguacate" data-price="45.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+8"><img
+                        src="img/PELUCHE AGUACATE.webp" alt="Peluche de Aguacate">
+                    <h3>Peluche de Aguacate</h3>
+                    <div class="price"><span class="current-price">S/ 45.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="409" data-name="Llavero Funko Pocket Pop!" data-price="28.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+9"><img
+                        src="img/llavero funko pockert.webp" alt="Llavero Funko">
+                    <h3>Llavero Funko Pocket!</h3>
+                    <div class="price"><span class="current-price">S/ 28.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="410" data-name="Tarjeta de Regalo KOKY" data-price="50.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+10"><img
+                        src="img/tarjeta de regalo.webp" alt="Tarjeta de Regalo">
+                    <h3>Tarjeta de Regalo S/ 50</h3>
+                    <div class="price"><span class="current-price">S/ 50.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="411" data-name="Planta Suculenta Decorativa" data-price="22.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+11"><img
+                        src="img/suculenta decorativa.webp" alt="Planta Suculenta">
+                    <h3>Suculenta Decorativa</h3>
+                    <div class="price"><span class="current-price">S/ 22.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="412" data-name="Bombones de Chocolate" data-price="40.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+12"><img
+                        src="img/caja de bombones.webp" alt="Bombones de Chocolate">
+                    <h3>Caja de Bombones</h3>
+                    <div class="price"><span class="current-price">S/ 40.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="413" data-name="Álbum de Fotos Scrapbook" data-price="55.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+13"><img
+                        src="img/Álbum de Fotos Scrapbook.webp" alt="Álbum de Fotos">
+                    <h3>Álbum de Fotos Scrapbook</h3>
+                    <div class="price"><span class="current-price">S/ 55.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="414" data-name="Manta Suave Personalizada" data-price="89.90"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+14"><img
+                        src="img/manta personalizada.jpg" alt="Manta Suave">
+                    <h3>Manta Personalizada</h3>
+                    <div class="price"><span class="current-price">S/ 89.90</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="415" data-name="Set de Té para Uno" data-price="68.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+15"><img
+                        src="img/set de té para uno.webp" alt="Set de Té">
+                    <h3>Set de Té para Uno</h3>
+                    <div class="price"><span class="current-price">S/ 68.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="416" data-name="Cubo de Rubik Profesional" data-price="32.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+16"><img src="img/cubo rubick.webp"
+                        alt="Cubo de Rubik">
+                    <h3>Cubo de Rubik Pro</h3>
+                    <div class="price"><span class="current-price">S/ 32.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="417" data-name="Posavasos de Cerámica" data-price="24.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+17"><img
+                        src="img/set de  posavasos.webp" alt="Posavasos">
+                    <h3>Set de Posavasos (x4)</h3>
+                    <div class="price"><span class="current-price">S/ 24.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="418" data-name="Globo Terráqueo Decorativo" data-price="95.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+18"><img
+                        src="img/globo terraqueo.webp" alt="Globo Terráqueo">
+                    <h3>Globo Terráqueo Vintage</h3>
+                    <div class="price"><span class="current-price">S/ 95.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="419" data-name="Diario de Cuero con Lazo" data-price="48.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+19"><img src="img/diario CUERO.webp"
+                        alt="Diario de Cuero">
+                    <h3>Diario de Cuero</h3>
+                    <div class="price"><span class="current-price">S/ 48.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="420" data-name="Kit para Hacer Cerveza Artesanal" data-price="150.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+20"><img
+                        src="img/kit de cerveza.jpg" alt="Kit Cerveza">
+                    <h3>Kit Cerveza Artesanal</h3>
+                    <div class="price"><span class="current-price">S/ 150.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="421" data-name="Libro para Colorear Mandalas" data-price="20.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+21"><img
+                        src="img/libro mandalas adultos.webp" alt="Libro Mandalas">
+                    <h3>Libro Mandalas Adultos</h3>
+                    <div class="price"><span class="current-price">S/ 20.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="422" data-name="Caja Musical de Madera" data-price="70.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+22"><img src="img/caja musical.webp"
+                        alt="Caja Musical">
+                    <h3>Caja Musical de Madera</h3>
+                    <div class="price"><span class="current-price">S/ 70.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="423" data-name="Portalapicero de Diseño" data-price="30.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+23"><img
+                        src="img/portaLapiceroDISEÑO.webp" alt="Portalapicero">
+                    <h3>Portalapicero de Diseño</h3>
+                    <div class="price"><span class="current-price">S/ 30.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="424" data-name="Set de Copas de Vino" data-price="90.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+24"><img
+                        src="img/SET COPAS DE VINO.jpg" alt="Copas de Vino">
+                    <h3>Set Copas de Vino x2</h3>
+                    <div class="price"><span class="current-price">S/ 90.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="425" data-name="Termo Inteligente con Pantalla LED"
+                    data-price="58.00" data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+25"><img
+                        src="img/TERMO INTELIGENTE LED.webp" alt="Termo Inteligente">
+                    <h3>Termo Inteligente LED</h3>
+                    <div class="price"><span class="current-price">S/ 58.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="426" data-name="Pluma Estilográfica" data-price="120.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+26"><img
+                        src="img/PLUMA ESTILOGRAFICA.webp" alt="Pluma Estilográfica">
+                    <h3>Pluma Estilográfica</h3>
+                    <div class="price"><span class="current-price">S/ 120.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="427" data-name="Difusor de Aromas Ultrasónico" data-price="85.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+27"><img
+                        src="img/DIFUSOR DE AROMAS.webp" alt="Difusor de Aromas">
+                    <h3>Difusor de Aromas</h3>
+                    <div class="price"><span class="current-price">S/ 85.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="428" data-name="Kit de Barman" data-price="110.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+28"><img
+                        src="img/KIT DE BARMAN.webp" alt="Kit de Barman">
+                    <h3>Kit de Barman</h3>
+                    <div class="price"><span class="current-price">S/ 110.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="429" data-name="Papel de Regalo y Cintas" data-price="18.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+29"><img
+                        src="img/SET DE PAPEL Y CINTAS.webp" alt="Papel de Regalo">
+                    <h3>Set Papel y Cintas</h3>
+                    <div class="price"><span class="current-price">S/ 18.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+                <div class="product-card" data-id="430" data-name="Juego de Ajedrez de Lujo" data-price="160.00"
+                    data-image="https://placehold.co/300x300/d4edda/333?text=Regalo+30"><img
+                        src="img/AJEDREZ DE LUJO.webp" alt="Juego de Ajedrez">
+                    <h3>Ajedrez de Lujo</h3>
+                    <div class="price"><span class="current-price">S/ 160.00</span></div><button
+                        class="btn btn-secondary add-to-cart-btn">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-column">
+                <h4>KOKY</h4>
+                <p>Tu tienda de librería, arte y regalería favorita.</p>
+                <div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i
+                            class="fab fa-tiktok"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+            </div>
+            <div class="footer-column">
+                <h4>Links Útiles</h4>
+                <ul>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Política de Devolución</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Mi Cuenta</h4>
+                <ul>
+                    <li><a href="#">Ingresar</a></li>
+                    <li><a href="#">Mis Pedidos</a></li>
+                    <li><a href="#">Seguimiento de Envío</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Medios de pago</h4><img src="https://placehold.co/200x40/EFEFEF/333?text=Medios+de+Pago"
+                    alt="Medios de pago" class="payment-methods">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 KOKY. Con orgullo desde Huancayo, Perú.</p>
+            <p style="margin-top: 10px;">
+                <a href="reclamaciones.html" style="color: #fff; text-decoration: underline;">
+                    <i class="fa-solid fa-book"></i> Libro de Reclamaciones
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modales -->
+    <div class="modal-overlay" id="auth-modal">
+        <div class="modal-content"><button class="modal-close" aria-label="Cerrar">&times;</button>
+            <div id="login-view">
+                <div class="modal-header">
+                    <h2>Inicia sesión para comprar</h2>
+                    <p>Usa tu cuenta para ingresar a la tienda KOKY.</p>
+                </div>
+                <form class="login-form" id="login-form">
+                    <div class="form-group"><label for="login-email">Correo electrónico</label><input type="email"
+                            id="login-email" placeholder="Ingresa tu correo electrónico" required></div>
+                    <div class="form-group"><label for="login-password">Contraseña</label><input type="password"
+                            id="login-password" placeholder="Ingresa tu contraseña" required></div><a href="#"
+                        class="forgot-password">¿Olvidaste tu contraseña?</a><button type="submit"
+                        class="btn btn-primary btn-full-width">Ingresar</button>
+                </form>
+                <div class="modal-footer"><span>¿Aún no tienes cuenta? <a href="#"
+                            id="show-register-view">Regístrate</a></span></div>
+            </div>
+            <div id="register-view" style="display: none;">
+                <div class="modal-header">
+                    <h2>Crea tu cuenta</h2>
+                    <p>Es rápido y fácil.</p>
+                </div>
+                <form class="register-form" id="register-form">
+                    <div class="form-group"><label for="register-name">Nombre</label><input type="text"
+                            id="register-name" placeholder="Ingresa tu nombre" required></div>
+                    <div class="form-group"><label for="register-email">Correo electrónico</label><input type="email"
+                            id="register-email" placeholder="Ingresa tu correo electrónico" required></div>
+                    <div class="form-group"><label for="register-password">Contraseña</label><input type="password"
+                            id="register-password" placeholder="Crea una contraseña" required></div><button
+                        type="submit" class="btn btn-primary btn-full-width">Crear cuenta</button>
+                </form>
+                <div class="modal-footer"><span>¿Ya tienes una cuenta? <a href="#" id="show-login-view">Inicia
+                            sesión</a></span></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="add-to-cart-modal">
+        <div class="modal-content add-to-cart-modal-content"><button class="modal-close"
+                aria-label="Cerrar">&times;</button>
+            <div class="modal-body">
+                <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+                <div class="product-info">
+                    <h3>Producto agregado a tu Carro</h3>
+                    <div class="product-details"><img id="modal-product-image" src="" alt="Producto">
+                        <div>
+                            <p id="modal-product-name"></p><b id="modal-product-price"></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions"><button class="btn btn-tertiary" id="continue-shopping-btn">Seguir
+                    comprando</button><a href="carrito.html" class="btn btn-secondary">Ir al Carro</a></div>
+        </div>
+    </div>
+    <a href="https://wa.me/51999999999?text=Hola!%20Tengo%20una%20consulta%20desde%20la%20web%20de%20KOKY"
+        class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Scripts -->
+    <script src="js olds/script.js" defer></script>
+    <script src="js/loader.js" defer></script>
+    <script src="js olds/carrito.js" defer></script>
+    <script src="js/wishlist-logic.js" defer></script>
+</body>
+
+</html>
